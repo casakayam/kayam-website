@@ -10,9 +10,9 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   background: #0a1818;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a {
@@ -57,15 +57,26 @@ a {
   gap: 28px;
   padding: 20px 48px;
   color: #e4e2dd;
-  transition: background 280ms ease, padding 280ms ease, border-color 280ms ease;
+  background: linear-gradient(to bottom, rgba(20, 20, 20, 0.42), rgba(20, 20, 20, 0.12));
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background 280ms ease, padding 280ms ease, border-color 280ms ease,
+    transform 360ms cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: 1px solid transparent;
 }
 
+/* Header caché lors du scroll vers le bas */
+.hd--hidden {
+  transform: translateY(-100%);
+}
+
 .hd.scrolled {
-  background: rgba(228, 226, 221, 0.97);
-  backdrop-filter: blur(10px);
+  background: rgba(228, 226, 221, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 12px 48px;
   border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(10, 10, 10, 0.12);
   color: #1a1a1a;
 }
 
@@ -193,6 +204,49 @@ a {
   background: #e6740a;
   box-shadow: 0 6px 20px rgba(230, 63, 10, 0.4);
   transform: translateY(-1px);
+}
+
+/* ── Burger + menu mobile (cachés sur desktop) ───────────────────────── */
+.hd__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hd__burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  background: #e4e2dd;
+  transition: transform 240ms ease, opacity 200ms ease, background 280ms ease;
+}
+
+.hd.scrolled .hd__burger span {
+  background: #1a1a1a;
+}
+
+.hd.nav-open .hd__burger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hd.nav-open .hd__burger span:nth-child(2) {
+  opacity: 0;
+}
+
+.hd.nav-open .hd__burger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.hd__mobile {
+  display: none;
 }
 
 /* ── HERO ─────────────────────────────────────────────────────────── */
@@ -500,6 +554,7 @@ a {
   .hd,
   .hd.scrolled {
     padding: 14px 20px;
+    gap: 12px;
   }
 
   .hd__nav {
@@ -510,6 +565,105 @@ a {
     display: none;
   }
 
+  /* Le bouton "BOOK" desktop est remplacé par le burger + le menu mobile */
+  .hd__right > .btn-book {
+    display: none;
+  }
+
+  .hd__brand {
+    gap: 10px;
+  }
+
+  .hd__logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hd__name {
+    font-size: 15px;
+  }
+
+  .hd__sub {
+    font-size: 15px;
+  }
+
+  .hd__right {
+    gap: 8px;
+  }
+
+  .hd__burger {
+    display: flex;
+  }
+
+  /* Panneau de navigation mobile déroulant */
+  .hd__mobile {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 20px 24px;
+    background: rgba(20, 20, 20, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 40px rgba(10, 10, 10, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition: opacity 240ms ease, transform 240ms ease, visibility 0s linear 240ms;
+  }
+
+  .hd.nav-open .hd__mobile {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 240ms ease, transform 240ms ease, visibility 0s;
+  }
+
+  .hd__mobile a {
+    font-family: 'Anton', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    color: #e4e2dd;
+    padding: 12px 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .hd__mobile-lang {
+    display: flex;
+    gap: 0;
+    padding: 14px 0 6px;
+  }
+
+  .hd__mobile-lang button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: rgba(228, 226, 221, 0.55);
+  }
+
+  .hd__mobile-lang button.active {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .hd__mobile-lang button:not(:last-child) {
+    border-right: 1px solid rgba(228, 226, 221, 0.25);
+  }
+
+  .hd__mobile-book {
+    text-align: center;
+    margin-top: 8px;
+    padding: 14px 22px;
+  }
+
   .hero__content {
     padding: 92px 24px 48px;
   }
@@ -518,19 +672,42 @@ a {
     padding-left: 0;
     text-align: center;
     max-width: 100%;
+    transform: translateY(100px);
   }
 
+  /* Seul le titre (eyebrow + STAY LONGER / STAY different) remonte ;
+     la description, les boutons et les stats restent en place. */
+  .hero__inner .eyebrow,
+  .hero__inner .hero__title {
+    transform: translateY(-100px);
+  }
+
+  /* Dégradé plus léger au centre pour mieux voir la photo,
+     assombri en haut et en bas pour garder la lisibilité du texte. */
   .hero__overlay {
-    background: rgba(10, 24, 24, 0.82);
+    background: linear-gradient(to bottom,
+        rgba(10, 24, 24, 0.55) 0%,
+        rgba(10, 24, 24, 0.22) 45%,
+        rgba(10, 24, 24, 0.72) 100%);
   }
 
+  /* Titre centré */
+  .hero__inner .eyebrow {
+    justify-content: center;
+  }
+
+  .hero__title {
+    align-items: center;
+  }
+
+  /* Titre agrandi */
   .title-line {
-    font-size: calc(clamp(34px, 10vw, 72px) * var(--title-scale));
+    font-size: calc(clamp(44px, 13vw, 96px) * var(--title-scale));
     white-space: nowrap;
   }
 
   .title-script {
-    font-size: calc(clamp(40px, 11.5vw, 80px) * var(--title-scale));
+    font-size: calc(clamp(52px, 15vw, 110px) * var(--title-scale));
   }
 
   .dots-sep {
@@ -1082,37 +1259,25 @@ body {
 /* Photo color treatments per slot */
 .slot--room .slot__layer {
   background:
-    linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0 50%, transparent 50%),
-    radial-gradient(circle at 30% 80%, rgba(230, 116, 10, 0.18), transparent 60%),
-    radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.65), transparent 55%),
-    #d8d4ca;
+    linear-gradient(180deg, rgba(12, 16, 16, 0.08) 0%, rgba(12, 16, 16, 0.22) 100%),
+    url("../assets/Photos loren/SAXO Sophia_music.webp") center 32% / cover no-repeat;
 }
 
 .slot--studio .slot__layer {
   background:
-    linear-gradient(135deg, rgba(228, 226, 221, 0.05) 0 50%, transparent 50%),
-    radial-gradient(circle at 22% 78%, rgba(230, 63, 10, 0.24), transparent 60%),
-    radial-gradient(circle at 78% 24%, rgba(228, 226, 221, 0.08), transparent 55%),
-    #161616;
+    linear-gradient(180deg, rgba(12, 16, 16, 0.12) 0%, rgba(12, 16, 16, 0.32) 100%),
+    url("../assets/Photos loren/A place with soul.webp") center 28% / cover no-repeat;
 }
 
 .slot--jam .slot__layer {
   background:
-    linear-gradient(135deg, rgba(0, 0, 0, 0.06) 0 50%, transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.24), transparent 60%),
-    radial-gradient(circle at 80% 22%, rgba(0, 0, 0, 0.18), transparent 55%),
-    #b8431a;
+    linear-gradient(180deg, rgba(12, 16, 16, 0.08) 0%, rgba(12, 16, 16, 0.18) 100%),
+    url("../assets/Photos loren/PAINTING Mino_art work.webp") 62% center / cover no-repeat;
 }
 
 /* Horizon line (studio slot) */
 .slot__horizon {
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  top: 60%;
-  height: 1px;
-  background: rgba(228, 226, 221, 0.22);
-  z-index: 2;
+  display: none;
 }
 
 /* Film grain overlay */
@@ -1625,6 +1790,7 @@ body {
 .s4__head-wrap {
   max-width: 920px;
   margin-bottom: 64px;
+  position: relative;
 }
 
 .s4__eyebrow-row {
@@ -1689,6 +1855,35 @@ body {
 }
 
 /* ─────── Video banner ─────── */
+.s4__title-illus {
+  display: none;
+}
+
+.s4__head-wrap > :not(.s4__title-illus) {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 981px) {
+  .s4__head-wrap {
+    max-width: 1280px;
+    min-height: 420px;
+    padding-right: clamp(360px, 38vw, 560px);
+  }
+
+  .s4__title-illus {
+    display: block;
+    position: absolute;
+    top: -58px;
+    right: -18px;
+    width: clamp(360px, 34vw, 540px);
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
 .vid {
   position: relative;
   display: block;
@@ -1906,47 +2101,32 @@ body {
 
 .tile__slot--forest {
   background:
-    linear-gradient(135deg, rgba(228, 226, 221, 0.05) 0 50%, transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(230, 116, 10, 0.16), transparent 60%),
-    radial-gradient(circle at 75% 25%, rgba(228, 226, 221, 0.08), transparent 60%),
-    #0a3838;
-  background-size: 20px 20px, 100% 100%, 100% 100%, 100% 100%;
+    linear-gradient(180deg, rgba(8, 12, 12, 0.06) 0%, rgba(8, 12, 12, 0.34) 100%),
+    url("../assets/Photos loren/JAM Session.webp") center 42% / cover no-repeat;
 }
 
 .tile__slot--ink {
   background:
-    linear-gradient(135deg, rgba(228, 226, 221, 0.05) 0 50%, transparent 50%),
-    radial-gradient(circle at 25% 80%, rgba(230, 63, 10, 0.22), transparent 60%),
-    radial-gradient(circle at 75% 25%, rgba(228, 226, 221, 0.06), transparent 60%),
-    #181612;
-  background-size: 20px 20px, 100% 100%, 100% 100%, 100% 100%;
+    linear-gradient(180deg, rgba(8, 12, 12, 0.08) 0%, rgba(8, 12, 12, 0.36) 100%),
+    url("../assets/Photos loren/RECORDS Studio_jerome work.webp") 58% center / cover no-repeat;
 }
 
 .tile__slot--taupe {
   background:
-    linear-gradient(135deg, rgba(0, 0, 0, 0.06) 0 50%, transparent 50%),
-    radial-gradient(circle at 30% 75%, rgba(255, 255, 255, 0.22), transparent 60%),
-    radial-gradient(circle at 75% 25%, rgba(230, 116, 10, 0.10), transparent 60%),
-    #a89e87;
-  background-size: 20px 20px, 100% 100%, 100% 100%, 100% 100%;
+    linear-gradient(180deg, rgba(8, 12, 12, 0.06) 0%, rgba(8, 12, 12, 0.28) 100%),
+    url("../assets/Photos loren/YOGA Session.webp") center 38% / cover no-repeat;
 }
 
 .tile__slot--terra {
   background:
-    linear-gradient(135deg, rgba(0, 0, 0, 0.06) 0 50%, transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.18), transparent 60%),
-    radial-gradient(circle at 78% 24%, rgba(0, 0, 0, 0.14), transparent 60%),
-    #a83a0c;
-  background-size: 20px 20px, 100% 100%, 100% 100%, 100% 100%;
+    linear-gradient(180deg, rgba(8, 12, 12, 0.04) 0%, rgba(8, 12, 12, 0.22) 100%),
+    url("../assets/Photos loren/PRINT Tecnics_art work.webp") center center / cover no-repeat;
 }
 
 .tile__slot--teal {
   background:
-    linear-gradient(135deg, rgba(228, 226, 221, 0.05) 0 50%, transparent 50%),
-    radial-gradient(circle at 22% 80%, rgba(230, 116, 10, 0.16), transparent 60%),
-    radial-gradient(circle at 78% 24%, rgba(228, 226, 221, 0.10), transparent 60%),
-    #0d6969;
-  background-size: 20px 20px, 100% 100%, 100% 100%, 100% 100%;
+    linear-gradient(180deg, rgba(8, 12, 12, 0.04) 0%, rgba(8, 12, 12, 0.24) 100%),
+    url("../assets/Photos loren/PAINTING Orrali_art work.jpg") center 44% / cover no-repeat;
 }
 
 .tile__num {
@@ -2127,9 +2307,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 60% at 30% 70%, rgba(230, 116, 10, 0.28), transparent 60%),
-    radial-gradient(ellipse 50% 50% at 80% 20%, rgba(13, 105, 105, 0.36), transparent 60%),
-    linear-gradient(135deg, #0a1212 0%, #131816 40%, #1c1c14 80%, #0e1818 100%);
+    linear-gradient(180deg, rgba(10, 18, 18, 0.10) 0%, rgba(10, 18, 18, 0.30) 100%),
+    url("../assets/Photos loren/RECORD Studio_estevan.webp") 35% center / cover no-repeat;
 }
 
 /* Engraving lines suggesting motion in the room */
@@ -2164,15 +2343,7 @@ body {
 
 /* The illus-records image, layered for warmth */
 .s5__illus {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 92%;
-  max-width: 640px;
-  opacity: 0.78;
-  mix-blend-mode: screen;
-  pointer-events: none;
+  display: none;
 }
 
 /* Vignette + bottom label */
@@ -2180,9 +2351,13 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.32) 0%, transparent 35%, transparent 60%, rgba(0, 0, 0, 0.45) 100%),
-    linear-gradient(90deg, transparent 60%, rgba(7, 66, 66, 0.55) 100%);
+    linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, transparent 34%, transparent 68%, rgba(0, 0, 0, 0.40) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.12) 0%, transparent 28%, transparent 72%, rgba(7, 66, 66, 0.30) 100%);
   pointer-events: none;
+}
+
+.s5__console {
+  display: none;
 }
 
 .s5__image-label {
@@ -2740,29 +2915,20 @@ body {
 
 .card__slot--taupe {
   background:
-    linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0 50%, transparent 50%),
-    radial-gradient(circle at 25% 75%, rgba(255, 255, 255, 0.28), transparent 60%),
-    radial-gradient(circle at 78% 24%, rgba(230, 116, 10, 0.12), transparent 60%),
-    #b3aa92;
-  background-size: 20px 20px, 100% 100%, 100% 100%, 100% 100%;
+    linear-gradient(180deg, rgba(12, 16, 16, 0.04) 0%, rgba(12, 16, 16, 0.18) 100%),
+    url("../assets/Photos loren/ROOM_dorms.webp") center center / cover no-repeat;
 }
 
 .card__slot--cream {
   background:
-    linear-gradient(135deg, rgba(0, 0, 0, 0.04) 0 50%, transparent 50%),
-    radial-gradient(circle at 30% 80%, rgba(230, 116, 10, 0.18), transparent 60%),
-    radial-gradient(circle at 78% 24%, rgba(255, 255, 255, 0.55), transparent 60%),
-    #d8d4ca;
-  background-size: 20px 20px, 100% 100%, 100% 100%, 100% 100%;
+    linear-gradient(180deg, rgba(12, 16, 16, 0.04) 0%, rgba(12, 16, 16, 0.14) 100%),
+    url("../assets/Photos loren/ROOMS_private.webp") center center / cover no-repeat;
 }
 
 .card__slot--forest {
   background:
-    linear-gradient(135deg, rgba(228, 226, 221, 0.05) 0 50%, transparent 50%),
-    radial-gradient(circle at 22% 80%, rgba(230, 116, 10, 0.20), transparent 60%),
-    radial-gradient(circle at 80% 22%, rgba(13, 105, 105, 0.40), transparent 60%),
-    #0a3838;
-  background-size: 20px 20px, 100% 100%, 100% 100%, 100% 100%;
+    linear-gradient(180deg, rgba(12, 16, 16, 0.06) 0%, rgba(12, 16, 16, 0.22) 100%),
+    url("../assets/Photos loren/ROOMS_glamping.webp") center center / cover no-repeat;
 }
 
 .card__slot--terra {
@@ -2776,13 +2942,7 @@ body {
 
 /* Schematic engraving inside each slot: hint at the room's "feel" */
 .card__slot svg.icon {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -54%);
-  width: 56%;
-  height: auto;
-  opacity: 0.55;
+  display: none;
 }
 
 .card__slot--taupe svg.icon {
@@ -3384,6 +3544,10 @@ body {
 }
 
 body.modal-open {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -3463,17 +3627,63 @@ body {
      Warmer cream, 3 cards visible at a time, paginated.
      Followed by a primary "Book your stay" CTA block.
      ───────────────────────────────────────────────────────────── */
-.s8 {
-  background: #efe9dc;
-  padding: 128px 48px;
+.s89-band {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+  background: #efe9dc;
+}
+
+.s89-band__bg {
+  position: absolute;
+  inset: -24vh calc(50% - 50vw);
+  z-index: 0;
+  background-image: url("../assets/Photos loren/VIEW from Kayam.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(0.5px) brightness(0.82) saturate(1.05);
+  transform: translate3d(0, var(--s89-shift, 0px), 0) scale(1.02);
+  will-change: transform;
+}
+
+.s89-band__veil {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg,
+      rgba(239, 233, 220, 0.34) 0%,
+      rgba(239, 233, 220, 0.22) 34%,
+      rgba(239, 233, 220, 0.28) 62%,
+      rgba(239, 233, 220, 0.40) 100%);
+}
+
+.s8 {
+  background: transparent;
+  padding: 128px 48px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.s8::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg,
+      rgba(245, 240, 229, 0.28) 0%,
+      rgba(245, 240, 229, 0.16) 42%,
+      rgba(245, 240, 229, 0.10) 100%);
 }
 
 .s8__inner {
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
+  z-index: 1;
 }
 
 .s8__marker {
@@ -3993,13 +4203,17 @@ body {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 78px);
+  grid-template-rows: repeat(8, 74px);
   gap: 14px;
 }
 
 .guest-note {
   position: relative;
-  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  padding: 18px 18px 22px;
   border-radius: 8px;
   background: #f7f0e4;
   border: 1px solid rgba(26, 26, 26, 0.1);
@@ -4020,8 +4234,8 @@ body {
 .guest-note p {
   margin: 12px 0 0;
   font-family: var(--font-body);
-  font-size: 18px;
-  line-height: 1.34;
+  font-size: 17px;
+  line-height: 1.28;
   color: var(--kp-ink);
 }
 
@@ -4036,7 +4250,8 @@ body {
 }
 
 .guest-note__tag {
-  margin-top: 18px;
+  margin-top: auto;
+  padding-top: 16px;
   color: var(--kp-orange);
 }
 
@@ -4050,13 +4265,13 @@ body {
 
 .guest-note--tilt-left {
   grid-column: 1 / 4;
-  grid-row: 1 / 3;
+  grid-row: 1 / 4;
   transform: rotate(-2.8deg);
 }
 
 .guest-note--dark {
   grid-column: 4 / 7;
-  grid-row: 1 / 3;
+  grid-row: 1 / 4;
   background: var(--kp-ink);
   transform: rotate(1.8deg);
 }
@@ -4066,9 +4281,15 @@ body {
   color: #e4e2dd;
 }
 
+.guest-note--tilt-left .guest-note__tag,
+.guest-note--dark .guest-note__tag {
+  margin-top: 12px;
+  padding-top: 0;
+}
+
 .guest-note--tall {
   grid-column: 1 / 3;
-  grid-row: 3 / 7;
+  grid-row: 4 / 8;
   background: var(--kp-teal);
   transform: rotate(1.4deg);
 }
@@ -4078,9 +4299,13 @@ body {
   color: rgba(228, 226, 221, 0.9);
 }
 
+.guest-note--tall p:not(.guest-note__replacement) {
+  display: none;
+}
+
 .guest-note--outline {
   grid-column: 3 / 7;
-  grid-row: 3 / 5;
+  grid-row: 4 / 6;
   background: transparent;
   border: 2px solid rgba(26, 26, 26, 0.22);
   transform: rotate(-1deg);
@@ -4088,15 +4313,21 @@ body {
 
 .guest-note--orange {
   grid-column: 3 / 6;
-  grid-row: 5 / 7;
+  grid-row: 6 / 9;
   background: var(--kp-orange);
   transform: rotate(2.4deg);
+  padding-bottom: 30px;
 }
 
 .guest-note--orange p,
 .guest-note--orange .guest-note__source,
 .guest-note--orange .guest-note__tag {
   color: #fff7ec;
+}
+
+.guest-note--orange .guest-note__tag {
+  color: var(--kp-teal);
+  padding-bottom: 6px;
 }
 
 .closing--guestbook {
@@ -4222,16 +4453,22 @@ body {
      Transitional CTA block below with WhatsApp + Book your stay.
      ───────────────────────────────────────────────────────────── */
 .s9 {
-  background: var(--kp-beige);
+  background: #efe9dc;
   padding: 128px 48px;
   position: relative;
+  z-index: 1;
   overflow: hidden;
+}
+
+.s9::before {
+  content: none;
 }
 
 .s9__inner {
   max-width: 820px;
   margin: 0 auto;
   position: relative;
+  z-index: 1;
 }
 
 .s9__marker {
@@ -5424,5 +5661,60 @@ body {
 }
 
 .s8 {
-  background: linear-gradient(to bottom left, #efe9dc, #074242) !important;
+  background: transparent !important;
+}
+
+/* ── VIDEO MODAL (vertical 9:16) ──────────────────────────────────── */
+.modal--video {
+  padding: 0;
+}
+
+.modal--video .modal__backdrop {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+/* Dialog sized to a 9:16 portrait box that fills the viewport
+   while staying fully visible on both desktop and mobile. */
+.modal__dialog--video {
+  width: min(100vw, calc(100vh * 9 / 16));
+  height: min(100vh, calc(100vw * 16 / 9));
+  width: min(100vw, calc(100dvh * 9 / 16));
+  height: min(100dvh, calc(100vw * 16 / 9));
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+  background: #000;
+  border-radius: 0;
+  border: 0;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);
+}
+
+.modal__video-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* The YouTube player forces a 16:9 layout and letterboxes a vertical
+   video to a tiny centred rectangle. To make the *video area* fill our
+   9:16 box, we oversize the iframe (keeping its 16:9 ratio), centre it,
+   and clip the overflow. 256/81 = (16/9)² is the exact width factor so
+   the centred 9:16 video region matches the wrapper. */
+.modal__video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: calc(100% * 256 / 81);
+  border-radius: 0;
+}
+
+.modal__dialog--video .modal__close {
+  top: 14px;
+  right: 14px;
+  background: rgba(20, 20, 20, 0.75);
+  border: 1px solid rgba(228, 226, 221, 0.2);
+  z-index: 10;
 }
