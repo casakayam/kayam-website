@@ -46,7 +46,7 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Anton&family=Akshar:wght@400;500;600;700&family=Caveat:wght@400;700&family=Dancing+Script:wght@400;700&family=Allura&family=DM+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="assets/colors_and_type.css">
-  <link rel="stylesheet" href="css/styles.css?v=6">
+  <link rel="stylesheet" href="css/styles.css?v=10">
 </head>
 
 <body>
@@ -64,8 +64,8 @@
       </div>
     </a>
     <nav class="hd__nav">
-      <a href="#casa">CASA</a>
-      <a href="#live">LIVE</a>
+      <a href="#casa">A HOUSE</a>
+      <a href="#live">EXPERIENCE</a>
       <a href="#records">RECORDS</a>
       <a href="#rooms">ROOMS</a>
       <a href="#guatape">GUATAPÉ</a>
@@ -85,8 +85,8 @@
 
     <!-- Menu mobile -->
     <nav class="hd__mobile" id="hdMobile" aria-hidden="true">
-      <a href="#casa">CASA</a>
-      <a href="#live">LIVE</a>
+      <a href="#casa">A HOUSE</a>
+      <a href="#live">EXPERIENCE</a>
       <a href="#records">RECORDS</a>
       <a href="#rooms">ROOMS</a>
       <a href="#guatape">GUATAPÉ</a>
@@ -248,7 +248,14 @@
       <div class="sp__narrative">
         <div class="sp__dots"></div>
         <div>
-          <div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="sp__platform-mark" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <rect x="2" y="8" width="12" height="5" rx="1" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M2 8V4M14 8V6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                <rect x="4" y="9.5" width="3.5" height="2" rx="0.6" stroke="currentColor" stroke-width="1.1"/>
+              </svg>
+            </span>
             <span class="sp__stat">4.77</span>
             <span class="sp__stat-unit">nights · average stay</span>
           </div>
@@ -284,7 +291,7 @@
           <h2 class="s3__head">
             <span class="s3__display" style="display: block;">A creative</span>
             <span class="s3__display" style="display: block;">house,</span>
-            <span class="s3__script" style="font-family: &quot;Dancing Script&quot;; display: block;">not just a hostel</span>
+            <span class="s3__script s3__script-lock" style="font-family: &quot;Dancing Script&quot;; display: block;">not just a hostel</span>
           </h2>
 
           <div class="s3__dots"></div>
@@ -299,7 +306,7 @@
           <p class="s3__lede">
             On a finca surrounded by nature, two kilometers from the village,
             you'll find <em>a hostel</em>, <em>a professional recording studio</em>,
-            and <em>a community that changes every week</em>.
+            and <em>a community that grows day by day</em>.
           </p>
         </div>
       </div>
@@ -327,7 +334,7 @@
               <span class="pillar__eyebrow">Music lovers</span>
             </div>
             <h3 class="pillar__title">A place where music <span class="pillar__title-script"
-                style="font-family: &quot;Dancing Script&quot;">live</span></h3>
+                style="font-family: &quot;Dancing Script&quot;; transform: rotate(-3deg) translateY(-2px);">live</span></h3>
             <div class="pillar__dots"></div>
             <p class="pillar__desc">
               Kayam Records: recording, mixing, mastering and coaching with a
@@ -363,7 +370,7 @@
               <span class="pillar__eyebrow">Get the vibe</span>
             </div>
             <h3 class="pillar__title">A place with <span class="pillar__title-script"
-                style="font-family: &quot;Dancing Script&quot;">soul</span></h3>
+                style="font-family: &quot;Dancing Script&quot;; transform: rotate(-3deg) translateY(-5px);">soul</span></h3>
             <div class="pillar__dots"></div>
             <p class="pillar__desc">
               34 beds across dormitories, private rooms, and bamboo glamping —
@@ -400,7 +407,7 @@
               <span class="pillar__eyebrow">03 — Cultural space</span>
             </div>
             <h3 class="pillar__title">A place to express <span class="pillar__title-script"
-                style="font-family: &quot;Dancing Script&quot;">yourself</span></h3>
+                style="font-family: &quot;Dancing Script&quot;; transform: rotate(-3deg) translateY(-5px);">yourself</span></h3>
             <div class="pillar__dots"></div>
             <p class="pillar__desc">
               Classes, workshops, jam sessions, yoga, and encounters with artists
@@ -424,8 +431,6 @@
 
 
   <section class="s4" id="live" data-screen-label="04 You live here">
-
-    <img class="s4__splash" src="assets/logo-splash.png" alt="">
     <div class="s4__inner">
 
       <!-- Header -->
@@ -440,9 +445,7 @@
           <span class="s4__display">sleep here.</span>
         </div>
         <div class="s4__display-row">
-          <span class="s4__display">You</span>
-          <span class="s4__script" style="font-family: &quot;Dancing Script&quot;">live</span>
-          <span class="s4__display">here.</span>
+          <span class="s4__script" style="font-family: &quot;Dancing Script&quot;; font-size: clamp(88px, 7.8vw, 128px);">You live here!</span>
         </div>
         <img class="s4__title-illus" src="assets/illus-casa.png" alt="" loading="lazy" decoding="async">
 
@@ -547,12 +550,6 @@
           </div>
         </div>
 
-      </div>
-
-      <!-- Bottom CTA -->
-      <div class="s4__bottom">
-        <div class="s4__bottom-eyebrow">The full program is one click away</div>
-        <a class="ghost-link" href="#activities">See the full program <span class="arr">→</span></a>
       </div>
 
     </div>
@@ -1067,7 +1064,7 @@
         <h3 class="closing__display">Ready to write</h3>
         <div class="closing__row">
           <span class="closing__display">your own</span>
-          <span class="closing__script" style="font-family: &quot;Dancing Script&quot;">story</span>
+          <span class="closing__script" style="font-family: &quot;Dancing Script&quot;; transform: translateY(-5px);">story</span>
           <span class="closing__display">?</span>
         </div>
         <div class="closing__cta">
@@ -1184,9 +1181,9 @@
           </button>
           <div class="faq__panel">
             <p class="faq__a">
-              Yes. We have <strong>two fully equipped kitchens</strong> — one for
-              guests and one for volunteers. There's a small village shop nearby,
-              and the village center has supermarkets and fresh markets.
+              Yes. We have a fully equipped kitchen. There's a small village
+              shop nearby, and the village center has supermarkets and fresh
+              markets.
             </p>
           </div>
         </div>
@@ -1201,7 +1198,7 @@
           </button>
           <div class="faq__panel">
             <p class="faq__a">
-              Some are free — yoga, jam sessions, bonfires, film screenings, sports
+              Some are free — jam sessions, bonfires, film screenings, sports
               tournaments. Others are paid — recording studio sessions, production
               classes, art workshops, vocal coaching. You'll find the weekly
               program at reception and on our community WhatsApp group.
@@ -1307,7 +1304,6 @@
 
     <div class="s10__bg"></div>
     <div class="s10__horizon"></div>
-    <img class="s10__splash" src="assets/logo-splash.png" alt="">
     <div class="s10__overlay"></div>
     <div class="s10__caption">
       <span class="pip"></span>
@@ -1381,8 +1377,7 @@
       <div class="ft__tagrule">
         <span class="pip"></span>
         <span class="ft__tagline-mono">Kayam Project · Guatapé · Antioquia · Colombia</span>
-        <span class="ft__tagline-script" style="font-family: &quot;Dancing Script&quot;">un espacio dedicado a la
-          creación</span>
+        <span class="ft__tagline-script" style="font-family: &quot;Dancing Script&quot;">a space dedicated to creation</span>
       </div>
 
       <!-- Columns -->
@@ -1402,12 +1397,8 @@
           </p>
           <div class="ft__dots"></div>
 
-          <form class="ft__news"
-            onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓';">
-            <input type="email" placeholder="your@email.com" aria-label="Email">
-            <button type="submit">Subscribe</button>
-          </form>
-          <div class="ft__news-note">Once a month · jam sessions, residencies, open studios</div>
+          <a class="ft__contact-btn" href="https://wa.me/573207501977?text=Hello%20Casa%20Kayam!%20I%20found%20your%20website%20and%20I%27d%20love%20to%20get%20more%20information." target="_blank" rel="noreferrer">Contact us →</a>
+          <div class="ft__news-note">WhatsApp · we reply within the hour</div>
         </div>
 
         <!-- Explore -->
@@ -1485,7 +1476,7 @@
               <span class="handle">/casakayam</span>
               <span class="meta">FB</span>
             </a>
-            <a href="https://tiktok.com/@casakayam" target="_blank" rel="noreferrer">
+            <a href="https://tiktok.com/@kayam.guatape" target="_blank" rel="noreferrer">
               <span class="icon">
                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path
@@ -1493,17 +1484,17 @@
                     fill="currentColor" />
                 </svg>
               </span>
-              <span class="handle">@casakayam</span>
+              <span class="handle">@kayam.guatape</span>
               <span class="meta">TT</span>
             </a>
-            <a href="https://youtube.com/@casakayam" target="_blank" rel="noreferrer">
+            <a href="https://youtube.com/@casakayamguatape" target="_blank" rel="noreferrer">
               <span class="icon">
                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <rect x="2" y="4" width="12" height="8" rx="2" stroke="currentColor" stroke-width="1.2" />
                   <path d="M7 6.5l3 1.5-3 1.5V6.5z" fill="currentColor" />
                 </svg>
               </span>
-              <span class="handle">@casakayam</span>
+              <span class="handle">@casakayamguatape</span>
               <span class="meta">YT</span>
             </a>
           </div>
@@ -1628,8 +1619,8 @@
     "sameAs": [
       "https://instagram.com/casakayam",
       "https://facebook.com/casakayam",
-      "https://tiktok.com/@casakayam",
-      "https://youtube.com/@casakayam",
+      "https://tiktok.com/@kayam.guatape",
+      "https://youtube.com/@casakayamguatape",
       "https://kayamrecords.com"
     ],
     "amenityFeature": [

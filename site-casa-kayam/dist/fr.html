@@ -46,7 +46,7 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Anton&family=Akshar:wght@400;500;600;700&family=Caveat:wght@400;700&family=Dancing+Script:wght@400;700&family=Allura&family=DM+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="assets/colors_and_type.css">
-  <link rel="stylesheet" href="css/styles.css?v=6">
+  <link rel="stylesheet" href="css/styles.css?v=10">
 </head>
 
 <body>
@@ -64,8 +64,8 @@
       </div>
     </a>
     <nav class="hd__nav">
-      <a href="#casa">MAISON</a>
-      <a href="#live">VIVRE</a>
+      <a href="#casa">QUI SOMMES NOUS?</a>
+      <a href="#live">LIEUX DE VIE</a>
       <a href="#records">RECORDS</a>
       <a href="#rooms">CHAMBRES</a>
       <a href="#guatape">GUATAPÉ</a>
@@ -85,8 +85,8 @@
 
     <!-- Menu mobile -->
     <nav class="hd__mobile" id="hdMobile" aria-hidden="true">
-      <a href="#casa">MAISON</a>
-      <a href="#live">VIVRE</a>
+      <a href="#casa">QUI SOMMES NOUS?</a>
+      <a href="#live">LIEUX DE VIE</a>
       <a href="#records">RECORDS</a>
       <a href="#rooms">CHAMBRES</a>
       <a href="#guatape">GUATAPÉ</a>
@@ -247,7 +247,14 @@
       <div class="sp__narrative">
         <div class="sp__dots"></div>
         <div>
-          <div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="sp__platform-mark" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <rect x="2" y="8" width="12" height="5" rx="1" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M2 8V4M14 8V6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                <rect x="4" y="9.5" width="3.5" height="2" rx="0.6" stroke="currentColor" stroke-width="1.1"/>
+              </svg>
+            </span>
             <span class="sp__stat">4.77</span>
             <span class="sp__stat-unit">nuits · séjour moyen</span>
           </div>
@@ -282,8 +289,8 @@
 
           <h2 class="s3__head">
             <span class="s3__display" style="display: block;">Une maison</span>
-            <span class="s3__display" style="display: block;">créative,</span>
-            <span class="s3__script" style="font-family: &quot;Dancing Script&quot;; display: block;">pas seulement une auberge</span>
+            <span class="s3__display" style="display: block; position: relative; top: 10px;">créative,</span>
+            <span class="s3__script s3__script-lock" style="font-family: &quot;Dancing Script&quot;; display: block; position: relative; top: 10px;">pas juste une auberge</span>
           </h2>
 
           <div class="s3__dots"></div>
@@ -294,7 +301,7 @@
             Casa Kayam est né d'une idée simple : créer un lieu où le voyage ne se résume pas à une étape. Un endroit où musiciens, artistes, voyageurs et gens du coin se retrouvent autour de la création.
           </p>
           <p class="s3__lede">
-            Sur une finca entourée de nature, à deux kilomètres du village, vous trouverez <em>une auberge</em>, <em>un studio d'enregistrement professionnel</em> et <em>une communauté qui change chaque semaine</em>.
+            Sur une finca entourée de nature, à deux kilomètres du village, vous trouverez <em>une auberge</em>, <em>un studio d'enregistrement professionnel</em> et <em>une communauté qui grandit de jour en jour</em>.
           </p>
         </div>
       </div>
@@ -321,7 +328,7 @@
               <span class="dot"></span>
               <span class="pillar__eyebrow">Mélomanes</span>
             </div>
-            <h3 class="pillar__title">Un lieu où la musique <span class="pillar__title-script" style="font-family: &quot;Dancing Script&quot;">vit</span></h3>
+            <h3 class="pillar__title">Un lieu où la musique <span class="pillar__title-script" style="font-family: &quot;Dancing Script&quot;; transform: rotate(-3deg) translateY(-2px);">vit</span></h3>
             <div class="pillar__dots"></div>
             <p class="pillar__desc">
               Kayam Records : enregistrement, mixage, mastering et coaching avec un ingénieur du son fort de plus de 15 ans d'expérience.
@@ -355,7 +362,7 @@
               <span class="dot"></span>
               <span class="pillar__eyebrow">Ressentez l'ambiance</span>
             </div>
-            <h3 class="pillar__title">Un lieu avec une <span class="pillar__title-script" style="font-family: &quot;Dancing Script&quot;">âme</span></h3>
+            <h3 class="pillar__title">Un lieu avec une <span class="pillar__title-script" style="font-family: &quot;Dancing Script&quot;; transform: rotate(-3deg) translateY(-5px);">âme</span></h3>
             <div class="pillar__dots"></div>
             <p class="pillar__desc">
               34 lits répartis entre dortoirs, chambres privées et glamping en bambou — le tout sur la même finca.
@@ -390,7 +397,7 @@
               <span class="dot"></span>
               <span class="pillar__eyebrow">03 — Espace culturel</span>
             </div>
-            <h3 class="pillar__title">Un lieu pour vous <span class="pillar__title-script" style="font-family: &quot;Dancing Script&quot;">exprimer</span></h3>
+            <h3 class="pillar__title">Un lieu pour vous <span class="pillar__title-script" style="font-family: &quot;Dancing Script&quot;; transform: rotate(-3deg) translateY(-5px);">exprimer</span></h3>
             <div class="pillar__dots"></div>
             <p class="pillar__desc">
               Cours, ateliers, jam sessions, yoga et rencontres avec des artistes du monde entier.
@@ -413,8 +420,6 @@
 
 
   <section class="s4" id="live" data-screen-label="04 You live here">
-
-    <img class="s4__splash" src="assets/logo-splash.png" alt="">
     <div class="s4__inner">
 
       <!-- Header -->
@@ -424,19 +429,17 @@
           <span class="s4__eyebrow" style="font-family: &quot;DM Mono&quot;">Section 04 — Une semaine à Casa Kayam</span>
         </div>
 
-        <h2 class="s4__display">Vous ne faites pas</h2>
+        <h2 class="s4__display s4__fr-title-line">Vous ne faites pas</h2>
         <div class="s4__display-row">
-          <span class="s4__display">que dormir.</span>
+          <span class="s4__display s4__fr-title-line">qu'y dormir.</span>
         </div>
         <div class="s4__display-row">
-          <span class="s4__display">Vous</span>
-          <span class="s4__script" style="font-family: &quot;Dancing Script&quot;">y vivez</span>
-          <span class="s4__display">vraiment.</span>
+          <span class="s4__script" style="font-family: &quot;Dancing Script&quot;; display: inline-block;">Vous y vivez<br>vraiment!</span>
         </div>
         <img class="s4__title-illus" src="assets/illus-casa.png" alt="" loading="lazy" decoding="async">
 
         <p class="s4__sub">
-          Un nouveau programme chaque semaine. Concerts, ateliers, jam sessions, conversations qui se prolongent tard dans la nuit. C'est ici que le temps ralentit.
+          Concerts, ateliers, jam sessions, balade dans la montagne et discussions nocturnes... Un nouveau programme chaque semaine au coeur d'un lieu ou le temps ralentit.
         </p>
       </div>
 
@@ -535,12 +538,6 @@
           </div>
         </div>
 
-      </div>
-
-      <!-- Bottom CTA -->
-      <div class="s4__bottom">
-        <div class="s4__bottom-eyebrow">Le programme complet est à un clic</div>
-        <a class="ghost-link" href="#activities">Voir le programme complet <span class="arr">→</span></a>
       </div>
 
     </div>
@@ -705,7 +702,7 @@
         <div class="s5__display-row">
           <span class="s5__display">dans un</span>
           <span class="s5__script"
-            style="font-family: &quot;Dancing Script&quot;; line-height: 0.95; letter-spacing: 2px; padding: 0px; position: relative; top: -25px">studio</span>
+            style="font-family: &quot;Dancing Script&quot;; line-height: 0.95; letter-spacing: 2px; padding: 0px; position: relative; top: -10px; transform: none;">studio</span>
         </div>
         <div class="s5__display-row">
           <span class="s5__display">professionnel.</span>
@@ -808,7 +805,7 @@
               <span class="card__price-num">35,000</span>
               <span class="card__price-unit">COP / nuit</span>
             </div>
-            <p class="card__desc">Chambres partagées de quatre à huit, avec ou sans salle de bain privée.</p>
+            <p class="card__desc">Chambres partagées de 4 à 8 lits, avec ou sans salle de bain privée.</p>
             <a class="card__cta card__cta--primary" href="#book-dorms">
               <span>Voir les disponibilités</span><span class="arr">→</span>
             </a>
@@ -846,7 +843,7 @@
               <span class="card__price-num">125,000</span>
               <span class="card__price-unit">COP / nuit</span>
             </div>
-            <p class="card__desc">Pour deux à quatre, salle de bain privée, coworking inclus.</p>
+            <p class="card__desc">De 2 à 4 personnes, salle de bain privée, coworking inclus.</p>
             <a class="card__cta card__cta--primary" href="#book-privates">
               <span>Voir les disponibilités</span><span class="arr">→</span>
             </a>
@@ -884,7 +881,7 @@
               <span class="card__price-num">140,000</span>
               <span class="card__price-unit">COP / nuit</span>
             </div>
-            <p class="card__desc">Trois cabanes sur la colline — vue unique, deux personnes maximum.</p>
+            <p class="card__desc">Trois cabanes en bambou sur la colline.</p>
             <a class="card__cta card__cta--primary" href="#book-glamping">
               <span>Voir les disponibilités</span><span class="arr">→</span>
             </a>
@@ -931,10 +928,10 @@
         <h2 class="s7__display" style="margin-top:4px;">du village</h2>
 
         <div class="s7__display-row" style="margin-top:16px;">
-          <span class="s7__script" style="font-family: &quot;Dancing Script&quot;">À mille lieues</span>
+          <span class="s7__script" style="font-family: &quot;Dancing Script&quot;">À mille lieues du</span>
         </div>
         <div class="s7__display-row" style="margin-top:4px;">
-          <span class="s7__script" style="font-family: &quot;Dancing Script&quot;; white-space: nowrap;">du tourisme de masse</span>
+          <span class="s7__script" style="font-family: &quot;Dancing Script&quot;; white-space: nowrap;">tourisme de masse</span>
         </div>
 
         <div class="s7__dots"></div>
@@ -1042,7 +1039,7 @@
         <h3 class="closing__display">Prêt à écrire</h3>
         <div class="closing__row">
           <span class="closing__display">votre propre</span>
-          <span class="closing__script" style="font-family: &quot;Dancing Script&quot;">histoire</span>
+          <span class="closing__script" style="font-family: &quot;Dancing Script&quot;; transform: translateY(-5px);">histoire</span>
           <span class="closing__display">?</span>
         </div>
         <div class="closing__cta">
@@ -1164,7 +1161,7 @@
           </button>
           <div class="faq__panel">
             <p class="faq__a">
-              Certaines sont gratuites — yoga, jam sessions, feux de camp, projections de films, tournois sportifs. D'autres sont payantes — sessions au studio d'enregistrement, cours de production, ateliers d'art, coaching vocal. Vous trouverez le programme de la semaine à la réception et sur notre groupe WhatsApp communautaire.
+              Certaines sont gratuites — jam sessions, feux de camp, projections de films, tournois sportifs. D'autres sont payantes — sessions au studio d'enregistrement, cours de production, ateliers d'art, coaching vocal. Vous trouverez le programme de la semaine à la réception et sur notre groupe WhatsApp communautaire.
             </p>
           </div>
         </div>
@@ -1259,7 +1256,6 @@
 
     <div class="s10__bg"></div>
     <div class="s10__horizon"></div>
-    <img class="s10__splash" src="assets/logo-splash.png" alt="">
     <div class="s10__overlay"></div>
     <div class="s10__caption">
       <span class="pip"></span>
@@ -1353,12 +1349,8 @@
           </p>
           <div class="ft__dots"></div>
 
-          <form class="ft__news"
-            onsubmit="event.preventDefault(); this.querySelector('button').textContent='Abonné ✓';">
-            <input type="email" placeholder="votre@email.com" aria-label="Email">
-            <button type="submit">S'abonner</button>
-          </form>
-          <div class="ft__news-note">Une fois par mois · jam sessions, résidences, studios ouverts</div>
+          <a class="ft__contact-btn" href="https://wa.me/573207501977?text=Bonjour%20Casa%20Kayam%20!%20J%27ai%20visit%C3%A9%20votre%20site%20et%20j%27aimerais%20en%20savoir%20plus." target="_blank" rel="noreferrer">Nous contacter →</a>
+          <div class="ft__news-note">WhatsApp · on répond en moins d'une heure</div>
         </div>
 
         <!-- Explore -->
@@ -1436,7 +1428,7 @@
               <span class="handle">/casakayam</span>
               <span class="meta">FB</span>
             </a>
-            <a href="https://tiktok.com/@casakayam" target="_blank" rel="noreferrer">
+            <a href="https://tiktok.com/@kayam.guatape" target="_blank" rel="noreferrer">
               <span class="icon">
                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path
@@ -1444,17 +1436,17 @@
                     fill="currentColor" />
                 </svg>
               </span>
-              <span class="handle">@casakayam</span>
+              <span class="handle">@kayam.guatape</span>
               <span class="meta">TT</span>
             </a>
-            <a href="https://youtube.com/@casakayam" target="_blank" rel="noreferrer">
+            <a href="https://youtube.com/@casakayamguatape" target="_blank" rel="noreferrer">
               <span class="icon">
                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <rect x="2" y="4" width="12" height="8" rx="2" stroke="currentColor" stroke-width="1.2" />
                   <path d="M7 6.5l3 1.5-3 1.5V6.5z" fill="currentColor" />
                 </svg>
               </span>
-              <span class="handle">@casakayam</span>
+              <span class="handle">@casakayamguatape</span>
               <span class="meta">YT</span>
             </a>
           </div>
@@ -1578,8 +1570,8 @@
     "sameAs": [
       "https://instagram.com/casakayam",
       "https://facebook.com/casakayam",
-      "https://tiktok.com/@casakayam",
-      "https://youtube.com/@casakayam",
+      "https://tiktok.com/@kayam.guatape",
+      "https://youtube.com/@casakayamguatape",
       "https://kayamrecords.com"
     ],
     "amenityFeature": [
@@ -1596,8 +1588,8 @@
     ],
     "makesOffer": [
       { "@type": "Offer", "name": "Lit en dortoir", "description": "Chambres partagées de quatre à huit personnes, avec ou sans salle de bain privée.", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "35000", "priceCurrency": "COP", "unitText": "nuit" } },
-      { "@type": "Offer", "name": "Chambre privée", "description": "Pour deux à quatre personnes, salle de bain privée, coworking inclus.", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "125000", "priceCurrency": "COP", "unitText": "nuit" } },
-      { "@type": "Offer", "name": "Glamping en bambou", "description": "Trois cabanes à flanc de colline pour deux personnes maximum, avec une vue unique sur le lac de barrage.", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "140000", "priceCurrency": "COP", "unitText": "nuit" } }
+      { "@type": "Offer", "name": "Chambre privée", "description": "De 2 à 4 personnes, salle de bain privée, coworking inclus.", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "125000", "priceCurrency": "COP", "unitText": "nuit" } },
+      { "@type": "Offer", "name": "Glamping en bambou", "description": "Trois cabanes en bambou sur la colline.", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "140000", "priceCurrency": "COP", "unitText": "nuit" } }
     ],
     "potentialAction": {
       "@type": "ReserveAction",
@@ -1622,14 +1614,14 @@
       { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/PAINTING%20Mino_art%20work.webp", "caption": "Artiste en résidence peignant un portrait près de la fenêtre", "description": "Un artiste en résidence tatoué peint un portrait en noir et blanc sur toile, sur un chevalet en bois, près d'une grande fenêtre ouvrant sur les collines verdoyantes de Guatapé — l'atelier d'art et la résidence créative de Casa Kayam." },
       { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/RECORDS%20Studio_jerome%20work.webp", "caption": "Ingénieur du son à la console de Kayam Records", "description": "L'ingénieur du son à la console de mixage éclairée de Kayam Records, le studio d'enregistrement professionnel de Casa Kayam : faders, clavier mécanique, moniteur de studio et panneaux acoustiques, avec des hôtes observant une session live à Guatapé, en Colombie." },
       { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/YOGA%20Session.webp", "caption": "Yoga au coucher du soleil sur la pelouse", "description": "Un groupe pratique le yoga en binôme et des étirements sur la pelouse au crépuscule à Casa Kayam, bras levés sous un palmier avec les collines de Guatapé et le ciel bleu en arrière-plan — yoga au lever et au coucher du soleil dans l'auberge bien-être." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/tailler.webp", "caption": "Atelier d'art et d'artisanat autour de la table", "description": "Des hôtes de tous âges se réunissent autour d'une grande table pour un atelier pratique d'art et de reliure dans le laboratoire créatif de Casa Kayam, une animatrice les guidant, des œuvres originales aux murs et un chaleureux plafond en bois — ateliers du centre culturel de Guatapé." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/tailler.webp", "caption": "Atelier d'art et d'artisanat autour de la table", "description": "Des hôtes de tous âges se réunissent autour d'une grande table pour un atelier pratique d'art et de reliure dans le laboratoire créatif de Casa Kayam, une animatrice les guidant, des Å“uvres originales aux murs et un chaleureux plafond en bois — ateliers du centre culturel de Guatapé." },
       { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/PAINTING%20Orrali_art%20work.jpg", "caption": "Artiste en résidence peignant une fresque colorée en extérieur", "description": "Un artiste en résidence peint une grande fresque colorée sur un mur extérieur de Casa Kayam : un visage stylisé aux cheveux en forme de nuages sur fond jaune avec des formes bleues et rouges rappelant le drapeau colombien — culture du street-art et des artistes en résidence à Guatapé." },
       { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/music%20room%20ribon%20mics.webp", "caption": "Enregistrement de sitar avec micros à ruban en studio", "description": "Un musicien assis en tailleur sur le sol en bois de Kayam Records joue du sitar, avec deux micros à ruban sur pied au premier plan et des panneaux diffuseurs en bois aux murs — enregistrement de musique du monde dans le studio professionnel de Casa Kayam à Guatapé." },
       { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/ROOM_dorms.webp", "caption": "Dortoir avec lits superposés en bois", "description": "Un dortoir chaleureux à Casa Kayam avec un lit superposé en bois massif (couchettes numérotées), des rideaux d'intimité individuels, du linge blanc frais, une échelle en bois et une penderie ouverte sous un plafond en planches de bois — chambres partagées à partir de 35 000 COP la nuit à Guatapé." },
       { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/ROOMS_private.webp", "caption": "Chambre privée avec fresque botanique", "description": "Une chambre privée chaleureuse à Casa Kayam : lit double sur estrade basse avec linge blanc et chemin de table terracotta, serviettes pliées, plafond à lattes de bois, lampes de lecture douces et une fresque botanique décorative — chambres privées avec salle de bain et coworking à Guatapé." },
       { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/ROOMS_glamping.webp", "caption": "Tente de glamping en bambou avec vue sur le lac", "description": "À l'intérieur d'une tente de glamping en bambou et toile à Casa Kayam, les pans ouverts encadrent une terrasse privée en bois et une vue panoramique sur le lac de barrage et les collines de Guatapé — glamping boutique pour deux à flanc de colline." },
       { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/VIEW%20from%20Kayam.webp", "caption": "Vue aérienne sur les collines de la Vereda El Roble, Guatapé", "description": "Vue aérienne sur les collines verdoyantes et vallonnées de la Vereda El Roble à Guatapé, des fincas dispersées, le lac de barrage et le rocher d'El Peñol au loin sous un ciel bleu — l'environnement naturel de Casa Kayam, à 2 km du village." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/Terasse.webp", "caption": "Espace commun et réception bohème sous un toit en bambou", "description": "L'espace commun et la réception bohèmes de Casa Kayam sous un toit en bambou : longues tables et bancs communautaires en bois, fresques peintes à la main et piliers, plantes suspendues et une cuisine ouverte — le cœur social de l'auberge à Guatapé." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/Terasse.webp", "caption": "Espace commun et réception bohème sous un toit en bambou", "description": "L'espace commun et la réception bohèmes de Casa Kayam sous un toit en bambou : longues tables et bancs communautaires en bois, fresques peintes à la main et piliers, plantes suspendues et une cuisine ouverte — le cÅ“ur social de l'auberge à Guatapé." },
       { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/couch%C3%A9%20de%20soleil.webp", "caption": "Cabanes de glamping en bambou au coucher du soleil", "description": "Les cabanes de glamping en bambou de Casa Kayam alignées le long d'une crête herbeuse, illuminées par la chaude lumière dorée du coucher de soleil sous un ciel doucement nuageux au-dessus de Guatapé, en Colombie." }
     ]
   }
