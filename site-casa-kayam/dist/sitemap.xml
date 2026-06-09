@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ===================== English (default) ===================== -->
+  <url>
+    <loc>https://casakayam.com/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casakayam.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://casakayam.com/es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casakayam.com/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casakayam.com/"/>
+
+    <image:image>
+      <image:loc>https://casakayam.com/assets/ecosystem-wide_a1734187.webp</image:loc>
+      <image:title>Casa Kayam terrace bar overlooking the Guatapé reservoir</image:title>
+      <image:caption>Wide golden-hour view from a covered wooden terrace at Casa Kayam: two bar stools at a timber counter, lush tropical plants and a railing framing the green hills and the reservoir of Guatapé, Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/SAXO%20Sophia_music.webp</image:loc>
+      <image:title>Saxophone in the morning light on the bamboo terrace</image:title>
+      <image:caption>A woman plays the alto saxophone in soft morning light under the bamboo roof of Casa Kayam's terrace, surrounded by green plants overlooking the Guatapé hills.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/A%20place%20with%20soul.webp</image:loc>
+      <image:title>Guests gathered in the bougainvillea patio</image:title>
+      <image:caption>A cheerful group of international travellers pose together in the flower-filled patio of Casa Kayam, pink bougainvillea overhead — the community spirit of the hostel in Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/JAM%20Session.webp</image:loc>
+      <image:title>Evening jam session under the bamboo roundhouse</image:title>
+      <image:caption>Night-time acoustic jam session under the bamboo roundhouse at Casa Kayam: congas, two acoustic guitars and a singer, warm light and a colourful painting behind — live music at the cultural centre in Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/PAINTING%20Mino_art%20work.webp</image:loc>
+      <image:title>Resident artist painting a portrait by the window</image:title>
+      <image:caption>A tattooed resident artist paints a black-and-white portrait on an easel by a large window opening onto the green hills of Guatapé — the artist studio and creative residency at Casa Kayam.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/RECORDS%20Studio_jerome%20work.webp</image:loc>
+      <image:title>Sound engineer at the Kayam Records mixing console</image:title>
+      <image:caption>The sound engineer at the lit mixing console of Kayam Records, the professional recording studio inside Casa Kayam, with studio monitors and acoustic panels during a session in Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/YOGA%20Session.webp</image:loc>
+      <image:title>Sunset yoga on the lawn</image:title>
+      <image:caption>A group practises partner yoga and stretching on the grass at dusk at Casa Kayam, under a palm tree with the Guatapé hills behind — sunrise and sunset yoga at the wellness hostel.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/tailler.webp</image:loc>
+      <image:title>Art and craft workshop around the table</image:title>
+      <image:caption>Guests of all ages gather for a hands-on art and bookbinding workshop in Casa Kayam's creative lab, an instructor guiding them and artwork on the walls — workshops at the cultural centre in Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/PAINTING%20Orrali_art%20work.jpg</image:loc>
+      <image:title>Resident artist painting a colourful outdoor mural</image:title>
+      <image:caption>A resident artist paints a large colourful mural on an exterior wall of Casa Kayam: a stylised face with cloud-like hair on yellow, blue and red — street-art and resident-artist culture in Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/music%20room%20ribon%20mics.webp</image:loc>
+      <image:title>Sitar recording with ribbon microphones in the studio</image:title>
+      <image:caption>A musician plays the sitar on the wooden floor of Kayam Records, two ribbon microphones in the foreground and acoustic wood panels on the walls — world-music recording at Casa Kayam's studio in Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/ROOM_dorms.webp</image:loc>
+      <image:title>Wooden bunk-bed dormitory</image:title>
+      <image:caption>A cosy dormitory at Casa Kayam with a wooden bunk bed, individual privacy curtains, fresh white linens, a ladder and an open wardrobe — shared rooms from 35,000 COP per night in Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/ROOMS_private.webp</image:loc>
+      <image:title>Private room with botanical mural</image:title>
+      <image:caption>A warm private room at Casa Kayam: low platform double bed with white linen and terracotta runner, wooden slat ceiling, soft lamps and a botanical mural — private rooms with ensuite and coworking in Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/ROOMS_glamping.webp</image:loc>
+      <image:title>Bamboo glamping tent with a view over the reservoir</image:title>
+      <image:caption>Inside a bamboo-and-canvas glamping tent at Casa Kayam, the open flaps frame a private deck and a panoramic view over the Guatapé reservoir and hills — boutique glamping for two.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/VIEW%20from%20Kayam.webp</image:loc>
+      <image:title>Aerial view over the hills of Vereda El Roble, Guatapé</image:title>
+      <image:caption>Aerial view over the green hills of Vereda El Roble in Guatapé, scattered fincas, the reservoir and the distant El Peñol rock — the natural surroundings of Casa Kayam, 2 km from the village.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/Terasse.webp</image:loc>
+      <image:title>Bohemian common area and reception under a bamboo roof</image:title>
+      <image:caption>Casa Kayam's bohemian common area and reception beneath a bamboo roof: long communal tables, hand-painted murals and hanging plants — the social heart of the hostel in Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/couch%C3%A9%20de%20soleil.webp</image:loc>
+      <image:title>Bamboo glamping cabins at sunset</image:title>
+      <image:caption>Casa Kayam's bamboo glamping cabins along a grassy hillside ridge, glowing in warm golden sunset light over Guatapé, Colombia.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ===================== Español ===================== -->
+  <url>
+    <loc>https://casakayam.com/es.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casakayam.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://casakayam.com/es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casakayam.com/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casakayam.com/"/>
+
+    <image:image>
+      <image:loc>https://casakayam.com/assets/ecosystem-wide_a1734187.webp</image:loc>
+      <image:title>Bar de la terraza de Casa Kayam con vista al embalse de Guatapé</image:title>
+      <image:caption>Amplia vista a la hora dorada desde una terraza cubierta de madera en Casa Kayam: dos taburetes en una barra, plantas tropicales y una baranda que enmarcan las montañas verdes y el embalse de Guatapé, Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/SAXO%20Sophia_music.webp</image:loc>
+      <image:title>Saxofón a la luz de la mañana en la terraza de bambú</image:title>
+      <image:caption>Una mujer toca el saxofón alto con la suave luz de la mañana bajo el techo de bambú de la terraza de Casa Kayam, rodeada de plantas con vista a las montañas de Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/A%20place%20with%20soul.webp</image:loc>
+      <image:title>Huéspedes reunidos en el patio de buganvillas</image:title>
+      <image:caption>Un alegre grupo de viajeros internacionales posan juntos en el patio florido de Casa Kayam, con buganvillas rosadas — el espíritu comunitario del hostel en Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/JAM%20Session.webp</image:loc>
+      <image:title>Jam session nocturna bajo la maloca de bambú</image:title>
+      <image:caption>Jam session acústica nocturna bajo la maloca de bambú de Casa Kayam: congas, dos guitarras acústicas y un cantante, luz cálida y una pintura colorida al fondo — música en vivo en el centro cultural de Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/PAINTING%20Mino_art%20work.webp</image:loc>
+      <image:title>Artista residente pintando un retrato junto a la ventana</image:title>
+      <image:caption>Un artista residente pinta un retrato en blanco y negro en un caballete junto a una gran ventana que da a las montañas verdes de Guatapé — el taller de arte y la residencia creativa de Casa Kayam.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/RECORDS%20Studio_jerome%20work.webp</image:loc>
+      <image:title>Ingeniero de sonido en la consola de Kayam Records</image:title>
+      <image:caption>El ingeniero de sonido en la consola de mezcla iluminada de Kayam Records, el estudio de grabación profesional dentro de Casa Kayam, con monitores y paneles acústicos durante una sesión en Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/YOGA%20Session.webp</image:loc>
+      <image:title>Yoga al atardecer en el césped</image:title>
+      <image:caption>Un grupo practica yoga en pareja y estiramientos sobre el césped al anochecer en Casa Kayam, bajo una palmera con las montañas de Guatapé detrás — yoga al amanecer y al atardecer.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/tailler.webp</image:loc>
+      <image:title>Taller de arte y manualidades alrededor de la mesa</image:title>
+      <image:caption>Huéspedes de todas las edades se reúnen para un taller práctico de arte y encuadernación en el laboratorio creativo de Casa Kayam, con una instructora y obras en las paredes — talleres del centro cultural de Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/PAINTING%20Orrali_art%20work.jpg</image:loc>
+      <image:title>Artista residente pintando un mural colorido al aire libre</image:title>
+      <image:caption>Un artista residente pinta un gran mural colorido en una pared exterior de Casa Kayam: un rostro estilizado con cabello de nubes sobre amarillo, azul y rojo — arte urbano y artistas residentes en Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/music%20room%20ribon%20mics.webp</image:loc>
+      <image:title>Grabación de sitar con micrófonos de cinta en el estudio</image:title>
+      <image:caption>Un músico toca el sitar en el suelo de madera de Kayam Records, con dos micrófonos de cinta en primer plano y paneles acústicos de madera — grabación de música del mundo en el estudio de Casa Kayam en Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/ROOM_dorms.webp</image:loc>
+      <image:title>Dormitorio con literas de madera</image:title>
+      <image:caption>Un acogedor dormitorio en Casa Kayam con litera de madera, cortinas de privacidad individuales, ropa de cama blanca, escalera y armario abierto — habitaciones compartidas desde 35.000 COP por noche en Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/ROOMS_private.webp</image:loc>
+      <image:title>Habitación privada con mural botánico</image:title>
+      <image:caption>Una cálida habitación privada en Casa Kayam: cama doble sobre plataforma con ropa blanca y camino terracota, techo de listones de madera, lámparas suaves y un mural botánico — privadas con baño y coworking en Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/ROOMS_glamping.webp</image:loc>
+      <image:title>Carpa de glamping de bambú con vista al embalse</image:title>
+      <image:caption>Dentro de una carpa de glamping de bambú y lona en Casa Kayam, las solapas abiertas enmarcan una terraza privada y una vista panorámica del embalse y las montañas de Guatapé — glamping boutique para dos.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/VIEW%20from%20Kayam.webp</image:loc>
+      <image:title>Vista aérea sobre las montañas de la Vereda El Roble, Guatapé</image:title>
+      <image:caption>Vista aérea sobre las verdes colinas de la Vereda El Roble en Guatapé, fincas dispersas, el embalse y la lejana Piedra de El Peñol — el entorno natural de Casa Kayam, a 2 km del pueblo.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/Terasse.webp</image:loc>
+      <image:title>Zona común y recepción bohemia bajo un techo de bambú</image:title>
+      <image:caption>La zona común y recepción bohemia de Casa Kayam bajo un techo de bambú: largas mesas comunitarias, murales pintados a mano y plantas colgantes — el corazón social del hostel en Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/couch%C3%A9%20de%20soleil.webp</image:loc>
+      <image:title>Cabañas de glamping de bambú al atardecer</image:title>
+      <image:caption>Las cabañas de glamping de bambú de Casa Kayam a lo largo de una ladera, brillando con la cálida luz dorada del atardecer sobre Guatapé, Colombia.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ===================== Français ===================== -->
+  <url>
+    <loc>https://casakayam.com/fr.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casakayam.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://casakayam.com/es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casakayam.com/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casakayam.com/"/>
+
+    <image:image>
+      <image:loc>https://casakayam.com/assets/ecosystem-wide_a1734187.webp</image:loc>
+      <image:title>Bar de la terrasse de Casa Kayam avec vue sur le lac de Guatapé</image:title>
+      <image:caption>Large vue à l'heure dorée depuis une terrasse couverte en bois à Casa Kayam : deux tabourets le long d'un comptoir, des plantes tropicales et une rambarde encadrant les collines verdoyantes et le lac de barrage de Guatapé, en Colombie.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/SAXO%20Sophia_music.webp</image:loc>
+      <image:title>Saxophone dans la lumière du matin sur la terrasse en bambou</image:title>
+      <image:caption>Une femme joue du saxophone alto dans la douce lumière du matin sous le toit en bambou de la terrasse de Casa Kayam, entourée de plantes surplombant les collines de Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/A%20place%20with%20soul.webp</image:loc>
+      <image:title>Voyageurs réunis dans le patio aux bougainvilliers</image:title>
+      <image:caption>Un joyeux groupe de voyageurs internationaux pose ensemble dans le patio fleuri de Casa Kayam, sous les bougainvilliers roses — l'esprit communautaire de l'auberge à Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/JAM%20Session.webp</image:loc>
+      <image:title>Jam session du soir sous la maloca en bambou</image:title>
+      <image:caption>Jam session acoustique nocturne sous la maloca en bambou de Casa Kayam : congas, deux guitares acoustiques et un chanteur, lumière chaude et une peinture colorée en arrière-plan — musique live au centre culturel de Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/PAINTING%20Mino_art%20work.webp</image:loc>
+      <image:title>Artiste en résidence peignant un portrait près de la fenêtre</image:title>
+      <image:caption>Un artiste en résidence peint un portrait en noir et blanc sur un chevalet près d'une grande fenêtre ouvrant sur les collines verdoyantes de Guatapé — l'atelier d'art et la résidence créative de Casa Kayam.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/RECORDS%20Studio_jerome%20work.webp</image:loc>
+      <image:title>Ingénieur du son à la console de Kayam Records</image:title>
+      <image:caption>L'ingénieur du son à la console de mixage éclairée de Kayam Records, le studio d'enregistrement professionnel de Casa Kayam, avec moniteurs et panneaux acoustiques pendant une session à Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/YOGA%20Session.webp</image:loc>
+      <image:title>Yoga au coucher du soleil sur la pelouse</image:title>
+      <image:caption>Un groupe pratique le yoga en binôme et des étirements sur la pelouse au crépuscule à Casa Kayam, sous un palmier avec les collines de Guatapé en arrière-plan — yoga au lever et au coucher du soleil.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/tailler.webp</image:loc>
+      <image:title>Atelier d'art et d'artisanat autour de la table</image:title>
+      <image:caption>Des hôtes de tous âges se réunissent pour un atelier pratique d'art et de reliure dans le laboratoire créatif de Casa Kayam, une animatrice les guidant et des œuvres aux murs — ateliers du centre culturel de Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/PAINTING%20Orrali_art%20work.jpg</image:loc>
+      <image:title>Artiste en résidence peignant une fresque colorée en extérieur</image:title>
+      <image:caption>Un artiste en résidence peint une grande fresque colorée sur un mur extérieur de Casa Kayam : un visage stylisé aux cheveux en nuages sur jaune, bleu et rouge — street-art et artistes en résidence à Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/music%20room%20ribon%20mics.webp</image:loc>
+      <image:title>Enregistrement de sitar avec micros à ruban en studio</image:title>
+      <image:caption>Un musicien joue du sitar sur le sol en bois de Kayam Records, deux micros à ruban au premier plan et des panneaux acoustiques en bois — enregistrement de musique du monde dans le studio de Casa Kayam à Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/ROOM_dorms.webp</image:loc>
+      <image:title>Dortoir avec lits superposés en bois</image:title>
+      <image:caption>Un dortoir chaleureux à Casa Kayam avec lit superposé en bois, rideaux d'intimité individuels, linge blanc, échelle et penderie ouverte — chambres partagées à partir de 35 000 COP la nuit à Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/ROOMS_private.webp</image:loc>
+      <image:title>Chambre privée avec fresque botanique</image:title>
+      <image:caption>Une chambre privée chaleureuse à Casa Kayam : lit double sur estrade avec linge blanc et chemin terracotta, plafond à lattes de bois, lampes douces et une fresque botanique — chambres privées avec salle de bain et coworking à Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/ROOMS_glamping.webp</image:loc>
+      <image:title>Tente de glamping en bambou avec vue sur le lac</image:title>
+      <image:caption>À l'intérieur d'une tente de glamping en bambou et toile à Casa Kayam, les pans ouverts encadrent une terrasse privée et une vue panoramique sur le lac de barrage et les collines de Guatapé — glamping boutique pour deux.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/VIEW%20from%20Kayam.webp</image:loc>
+      <image:title>Vue aérienne sur les collines de la Vereda El Roble, Guatapé</image:title>
+      <image:caption>Vue aérienne sur les collines verdoyantes de la Vereda El Roble à Guatapé, des fincas dispersées, le lac de barrage et le rocher d'El Peñol au loin — l'environnement naturel de Casa Kayam, à 2 km du village.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/Photos%20loren/Terasse.webp</image:loc>
+      <image:title>Espace commun et réception bohème sous un toit en bambou</image:title>
+      <image:caption>L'espace commun et la réception bohèmes de Casa Kayam sous un toit en bambou : longues tables communautaires, fresques peintes à la main et plantes suspendues — le cœur social de l'auberge à Guatapé.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casakayam.com/assets/couch%C3%A9%20de%20soleil.webp</image:loc>
+      <image:title>Cabanes de glamping en bambou au coucher du soleil</image:title>
+      <image:caption>Les cabanes de glamping en bambou de Casa Kayam le long d'une crête herbeuse, illuminées par la chaude lumière dorée du coucher de soleil au-dessus de Guatapé, en Colombie.</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
