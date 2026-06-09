@@ -1,0 +1,28 @@
+# Redirections 301 — migration depuis l'ancien site Odoo
+# Règle Netlify : la PREMIÈRE correspondance gagne, donc on met le plus spécifique en haut.
+# Ces règles s'appliquent sur casakayam.com. Le domaine kayamproject.com est un "alias"
+# qui redirige déjà automatiquement vers casakayam.com (même chemin), donc ces règles
+# couvrent aussi le trafic venu de kayamproject.com.
+
+# --- Kayam Records : vers le site existant ---
+/kayam-records        https://kayamrecords.com/        301!
+/kayam-records/*      https://kayamrecords.com/:splat  301!
+
+# --- Casa Kayam : vers la nouvelle page d'accueil ---
+/casa-kayam           /   301
+
+# --- Anciennes pages Odoo sans équivalent → accueil (évite les 404) ---
+/actividades          /   301
+/contactus            /   301
+/kayam-cowork         /   301
+/kayam-event          /   301
+/kayam-lab            /   301
+/terms                /   301
+/shop                 /   301
+/groups               /   301
+/groups/*             /   301
+/website/info         /   301
+/blog                 /   301
+/blog/*               /   301
+/event/*              /   301
+/events               /   301
