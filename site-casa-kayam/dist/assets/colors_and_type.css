@@ -4,10 +4,10 @@
    ====================================================================== */
 
 /* --- Webfonts -------------------------------------------------------- */
-/* Anton + Akshar are on Google Fonts (free). Brittany is commercial and
-   NOT available via Google Fonts; we substitute with Allura (fountain-pen
-   style script). FLAG: replace with real Brittany.ttf. */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Akshar:wght@400;500;600;700&family=Allura&family=DM+Mono:wght@400;500&display=swap');
+/* Fonts are loaded once via a single <link> in each HTML <head>
+   (Anton, Akshar, Caveat, Dancing Script, Allura, DM Mono).
+   No @import here, to avoid a duplicate render-blocking request.
+   Brittany is commercial and substituted with Allura (fountain-pen feel). */
 
 :root {
   /* ==================================================================

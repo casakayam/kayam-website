@@ -66,7 +66,13 @@
   function unlockScroll() {
     body.classList.remove("modal-open");
     body.style.top = "";
+    // Restauration INSTANTANÉE de la position : sans ça, le scroll-behavior
+    // smooth (CSS) animerait ce retour et créerait un saut désagréable.
+    const root = document.documentElement;
+    const prevBehavior = root.style.scrollBehavior;
+    root.style.scrollBehavior = "auto";
     window.scrollTo(0, lockedScrollY);
+    root.style.scrollBehavior = prevBehavior;
   }
 
   function closeModal(modal) {
@@ -119,6 +125,15 @@
       button.setAttribute("aria-expanded", String(!isOpen));
     });
   });
+
+  const faqMoreBtn = document.querySelector("[data-faq-more]");
+  if (faqMoreBtn) {
+    const faqExtra = faqMoreBtn.nextElementSibling;
+    faqMoreBtn.addEventListener("click", () => {
+      const isOpen = faqExtra.classList.toggle("is-visible");
+      faqMoreBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
 
   // ── Menu mobile (burger) ───────────────────────────────────────────
   const burger = document.getElementById("hdBurger");
