@@ -926,6 +926,14 @@ body {
   line-height: 1;
 }
 
+.sp__count {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+  margin-top: 4px;
+}
+
 .sp__divider {
   width: 1px;
   height: 44px;
