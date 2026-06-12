@@ -340,9 +340,12 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 0;
   margin-bottom: 16px;
   font-family: 'DM Mono', monospace;
   font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(228, 226, 221, 0.75);
@@ -2435,11 +2438,6 @@ body {
   width: 100%;
   height: 100%;
   display: block;
-}
-
-/* The illus-records image, layered for warmth */
-.s5__illus {
-  display: none;
 }
 
 /* Vignette + bottom label */

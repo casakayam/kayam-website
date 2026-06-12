@@ -11,6 +11,13 @@ https://www.kayamproject.com/*   https://casakayam.com/:splat   301!
 /kayam-records/*      https://kayamrecords.com/:splat  301!
 
 # --- Casa Kayam : vers la nouvelle page d'accueil ---
+/index.html          /          301!
+/en                  /          301!
+/en/                 /          301!
+/es                  /es.html   301!
+/es/                 /es.html   301!
+/fr                  /fr.html   301!
+/fr/                 /fr.html   301!
 /casa-kayam           /   301
 
 # --- Anciennes pages Odoo sans équivalent → accueil (évite les 404) ---

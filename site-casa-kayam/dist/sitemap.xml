@@ -6,7 +6,7 @@
   <!-- ===================== English (default) ===================== -->
   <url>
     <loc>https://casakayam.com/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://casakayam.com/"/>
@@ -99,7 +99,7 @@
   <!-- ===================== Español ===================== -->
   <url>
     <loc>https://casakayam.com/es.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://casakayam.com/"/>
@@ -192,7 +192,7 @@
   <!-- ===================== Français ===================== -->
   <url>
     <loc>https://casakayam.com/fr.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://casakayam.com/"/>
