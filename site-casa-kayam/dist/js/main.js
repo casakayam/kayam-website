@@ -7,7 +7,7 @@
   const body = document.body;
   const VIDEO_URL = "https://www.youtube-nocookie.com/embed/HGFQbklmo6U?autoplay=1&rel=0&playsinline=1";
 
-  let lastScrollY = window.scrollY;
+  let lastScrollY = 0;
   let scrollTicking = false;
 
   function syncHeaderState() {
