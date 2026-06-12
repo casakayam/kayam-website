@@ -1344,7 +1344,7 @@ html[lang="fr"] .s3__script-lock {
 .slot--studio .slot__layer {
   background:
     linear-gradient(180deg, rgba(12, 16, 16, 0.12) 0%, rgba(12, 16, 16, 0.32) 100%),
-    url("../assets/Photos loren/A place with soul.webp") center 28% / cover no-repeat;
+    url("../assets/Photos loren/A place with soul-opt.webp") center 28% / cover no-repeat;
 }
 
 .slot--jam .slot__layer {
@@ -1983,7 +1983,7 @@ html[lang="fr"] .s4__fr-title-line {
 .vid__bg {
   position: absolute;
   inset: 0;
-  background: #0a1818 url("../assets/Photos loren/Terasse.webp") center center / cover no-repeat;
+  background: #0a1818 url("../assets/Photos loren/Terasse-opt.webp") center center / cover no-repeat;
   transition: transform 600ms var(--ease-standard);
   will-change: transform;
   backface-visibility: hidden;
@@ -2183,7 +2183,7 @@ html[lang="fr"] .s4__fr-title-line {
 .tile__slot--forest {
   background:
     linear-gradient(180deg, rgba(8, 12, 12, 0.06) 0%, rgba(8, 12, 12, 0.34) 100%),
-    url("../assets/Photos loren/JAM Session.webp") center 42% / cover no-repeat;
+    url("../assets/Photos loren/JAM Session-opt.webp") center 42% / cover no-repeat;
 }
 
 .tile__slot--ink {
@@ -3025,7 +3025,7 @@ body {
 .card__slot--forest {
   background:
     linear-gradient(180deg, rgba(12, 16, 16, 0.06) 0%, rgba(12, 16, 16, 0.22) 100%),
-    url("../assets/Photos loren/ROOMS_glamping.webp") center center / cover no-repeat;
+    url("../assets/Photos loren/ROOMS_glamping-opt.webp") center center / cover no-repeat;
 }
 
 .card__slot--terra {
@@ -3746,7 +3746,7 @@ body {
   position: absolute;
   inset: -24vh calc(50% - 50vw);
   z-index: 0;
-  background-image: url("../assets/Photos loren/VIEW from Kayam.webp");
+  background-image: url("../assets/Photos loren/VIEW from Kayam-opt.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -5027,7 +5027,7 @@ body {
 .s10__bg {
   position: absolute;
   inset: 0;
-  background: url("../assets/couch%C3%A9%20de%20soleil.webp") center center / cover no-repeat;
+  background: url("../assets/couche-de-soleil-opt.webp") center center / cover no-repeat;
 }
 
 /* Horizon engraving */

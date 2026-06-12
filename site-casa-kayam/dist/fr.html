@@ -9,8 +9,9 @@
   <meta name="author" content="Casa Kayam · Kayam Project">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="googlebot" content="index, follow, max-image-preview:large">
-  <link rel="icon" type="image/png" href="/assets/logo-splash.png">
-  <link rel="apple-touch-icon" href="/assets/logo-splash.png">
+  <link rel="icon" type="image/png" href="/assets/Logo%20KP%20TRANSPARENTE%20PNG.png">
+  <link rel="apple-touch-icon" href="/assets/Logo%20KP%20TRANSPARENTE%20PNG.png">
+  <link rel="preload" as="image" href="/assets/ecosystem-wide-mobile.webp" imagesrcset="/assets/ecosystem-wide-mobile.webp 960w, /assets/ecosystem-wide_a1734187.webp 2048w" imagesizes="100vw" fetchpriority="high">
   <link rel="canonical" href="https://casakayam.com/fr.html">
   <link rel="alternate" hreflang="en" href="https://casakayam.com/">
   <link rel="alternate" hreflang="es" href="https://casakayam.com/es.html">
@@ -47,22 +48,31 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Anton&family=Akshar:wght@400;500;600;700&family=Caveat:wght@400;700&family=Dancing+Script:wght@400;700&family=Allura&family=DM+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="assets/colors_and_type.css">
-  <link rel="stylesheet" href="css/styles.css?v=10">
+  <link rel="stylesheet" href="css/styles.css?v=11">
   <!-- Meta Pixel Code -->
   <script>
-    !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+    window.addEventListener('load', function () {
+      var loadPixel = function () {
+        !function (f, b, e, v, n, t, s) {
+          if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+              n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          };
+          if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+          n.queue = []; t = b.createElement(e); t.async = !0;
+          t.src = v; s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '831461683146599');
+        fbq('track', 'PageView');
       };
-      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-      n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '831461683146599');
-    fbq('track', 'PageView');
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadPixel, { timeout: 3500 });
+      } else {
+        setTimeout(loadPixel, 2500);
+      }
+    });
   </script>
   <noscript><img height="1" width="1" style="display:none" alt=""
       src="https://www.facebook.com/tr?id=831461683146599&ev=PageView&noscript=1" /></noscript>
@@ -77,7 +87,7 @@
   <!-- ── HEADER ──────────────────────────────────────────────────────── -->
   <header class="hd" id="hd">
     <a href="#top" class="hd__brand">
-      <img class="hd__logo" src="assets/logo-splash.png" alt="Logo Casa Kayam — auberge créative à Guatapé" decoding="async">
+      <img class="hd__logo" src="assets/logo-splash-96.webp" alt="Logo Casa Kayam — auberge créative à Guatapé" width="44" height="44" decoding="async">
       <div>
         <div class="hd__name">CASA KAYAM</div>
         <div class="hd__sub" style="font-family: &quot;Dancing Script&quot;">guatapé</div>
@@ -125,7 +135,7 @@
 
     <div class="hero__bg"></div>
     <img class="hero__photo" id="hero-photo" shape="rect" fit="cover" placeholder="Drop a photo here"
-      src="assets/ecosystem-wide_a1734187.webp" style="object-fit: cover;" alt="Vue à l'heure dorée depuis la terrasse couverte de Casa Kayam sur la végétation tropicale et le lac de barrage de Guatapé, Colombie" decoding="async" fetchpriority="high">
+      src="assets/ecosystem-wide_a1734187.webp" srcset="assets/ecosystem-wide-mobile.webp 960w, assets/ecosystem-wide_a1734187.webp 2048w" sizes="100vw" width="2048" height="1365" style="object-fit: cover;" alt="Vue à l'heure dorée depuis la terrasse couverte de Casa Kayam sur la végétation tropicale et le lac de barrage de Guatapé, Colombie" decoding="async" fetchpriority="high">
     <div class="hero__overlay" id="heroOverlay"></div>
     <div class="hero__footer-shade"></div>
 
@@ -320,7 +330,7 @@
 
 
   <section class="s3" id="casa" data-screen-label="03 A creative house" data-comment-anchor="be0e655e8a-section">
-    <img class="s3__tache" src="assets/taches/TACHE%20BEIGE%20funKayam.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+    <img class="s3__tache" src="assets/taches/tache-beige-funkayam-288.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="288" height="288">
     <div class="s3__inner">
 
       <!-- ── Top header ─────────────────────────────────────────── -->
@@ -1691,22 +1701,22 @@
       }
     },
     "image": [
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/ecosystem-wide_a1734187.webp", "representativeOfPage": true, "caption": "Bar de la terrasse couverte à l'heure dorée avec vue sur le lac de Guatapé", "description": "Large vue à l'heure dorée depuis une terrasse couverte en bois à Casa Kayam : deux tabourets le long d'un comptoir en bois, des plantes tropicales luxuriantes et une rambarde grillagée encadrant les collines verdoyantes et le lac de barrage de Guatapé, en Colombie." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/SAXO%20Sophia_music.webp", "caption": "Saxophone dans la lumière du matin sur la terrasse en bambou", "description": "Une femme aux cheveux bouclés et lunettes rondes joue du saxophone alto dans la douce lumière du matin sous le toit en bambou de la terrasse de Casa Kayam, entourée de plantes vertes surplombant les collines de Guatapé — un moment musical quotidien dans l'auberge créative." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/A%20place%20with%20soul.webp", "caption": "Voyageurs réunis dans le patio aux bougainvilliers", "description": "Un joyeux groupe de voyageurs internationaux pose ensemble dans le patio fleuri de Casa Kayam, sous les bougainvilliers roses et les murs blancs — l'esprit communautaire de l'auberge à Guatapé, en Colombie." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/JAM%20Session.webp", "caption": "Jam session du soir sous la maloca en bambou", "description": "Jam session acoustique nocturne sous la maloca en bambou de Casa Kayam : des musiciens jouant des congas, deux guitares acoustiques et un chanteur au micro, lumière chaude, tapis au sol et une peinture colorée en arrière-plan — musique live au centre culturel de Guatapé." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/PAINTING%20Mino_art%20work.webp", "caption": "Artiste en résidence peignant un portrait près de la fenêtre", "description": "Un artiste en résidence tatoué peint un portrait en noir et blanc sur toile, sur un chevalet en bois, près d'une grande fenêtre ouvrant sur les collines verdoyantes de Guatapé — l'atelier d'art et la résidence créative de Casa Kayam." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/RECORDS%20Studio_jerome%20work.webp", "caption": "Ingénieur du son à la console de Kayam Records", "description": "L'ingénieur du son à la console de mixage éclairée de Kayam Records, le studio d'enregistrement professionnel de Casa Kayam : faders, clavier mécanique, moniteur de studio et panneaux acoustiques, avec des hôtes observant une session live à Guatapé, en Colombie." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/YOGA%20Session.webp", "caption": "Yoga au coucher du soleil sur la pelouse", "description": "Un groupe pratique le yoga en binôme et des étirements sur la pelouse au crépuscule à Casa Kayam, bras levés sous un palmier avec les collines de Guatapé et le ciel bleu en arrière-plan — yoga au lever et au coucher du soleil dans l'auberge bien-être." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/tailler.webp", "caption": "Atelier d'art et d'artisanat autour de la table", "description": "Des hôtes de tous âges se réunissent autour d'une grande table pour un atelier pratique d'art et de reliure dans le laboratoire créatif de Casa Kayam, une animatrice les guidant, des Å“uvres originales aux murs et un chaleureux plafond en bois — ateliers du centre culturel de Guatapé." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/PAINTING%20Orrali_art%20work.jpg", "caption": "Artiste en résidence peignant une fresque colorée en extérieur", "description": "Un artiste en résidence peint une grande fresque colorée sur un mur extérieur de Casa Kayam : un visage stylisé aux cheveux en forme de nuages sur fond jaune avec des formes bleues et rouges rappelant le drapeau colombien — culture du street-art et des artistes en résidence à Guatapé." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/music%20room%20ribon%20mics.webp", "caption": "Enregistrement de sitar avec micros à ruban en studio", "description": "Un musicien assis en tailleur sur le sol en bois de Kayam Records joue du sitar, avec deux micros à ruban sur pied au premier plan et des panneaux diffuseurs en bois aux murs — enregistrement de musique du monde dans le studio professionnel de Casa Kayam à Guatapé." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/ROOM_dorms.webp", "caption": "Dortoir avec lits superposés en bois", "description": "Un dortoir chaleureux à Casa Kayam avec un lit superposé en bois massif (couchettes numérotées), des rideaux d'intimité individuels, du linge blanc frais, une échelle en bois et une penderie ouverte sous un plafond en planches de bois — chambres partagées à partir de 35 000 COP la nuit à Guatapé." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/ROOMS_private.webp", "caption": "Chambre privée avec fresque botanique", "description": "Une chambre privée chaleureuse à Casa Kayam : lit double sur estrade basse avec linge blanc et chemin de table terracotta, serviettes pliées, plafond à lattes de bois, lampes de lecture douces et une fresque botanique décorative — chambres privées avec salle de bain et coworking à Guatapé." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/ROOMS_glamping.webp", "caption": "Tente de glamping en bambou avec vue sur le lac", "description": "À l'intérieur d'une tente de glamping en bambou et toile à Casa Kayam, les pans ouverts encadrent une terrasse privée en bois et une vue panoramique sur le lac de barrage et les collines de Guatapé — glamping boutique pour deux à flanc de colline." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/VIEW%20from%20Kayam.webp", "caption": "Vue aérienne sur les collines de la Vereda El Roble, Guatapé", "description": "Vue aérienne sur les collines verdoyantes et vallonnées de la Vereda El Roble à Guatapé, des fincas dispersées, le lac de barrage et le rocher d'El Peñol au loin sous un ciel bleu — l'environnement naturel de Casa Kayam, à 2 km du village." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/Terasse.webp", "caption": "Espace commun et réception bohème sous un toit en bambou", "description": "L'espace commun et la réception bohèmes de Casa Kayam sous un toit en bambou : longues tables et bancs communautaires en bois, fresques peintes à la main et piliers, plantes suspendues et une cuisine ouverte — le cÅ“ur social de l'auberge à Guatapé." },
-      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/couch%C3%A9%20de%20soleil.webp", "caption": "Cabanes de glamping en bambou au coucher du soleil", "description": "Les cabanes de glamping en bambou de Casa Kayam alignées le long d'une crête herbeuse, illuminées par la chaude lumière dorée du coucher de soleil sous un ciel doucement nuageux au-dessus de Guatapé, en Colombie." }
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/ecosystem-wide_a1734187.webp", "url": "https://casakayam.com/assets/ecosystem-wide_a1734187.webp", "representativeOfPage": true, "caption": "Bar de la terrasse couverte à l'heure dorée avec vue sur le lac de Guatapé", "description": "Large vue à l'heure dorée depuis une terrasse couverte en bois à Casa Kayam : deux tabourets le long d'un comptoir en bois, des plantes tropicales luxuriantes et une rambarde grillagée encadrant les collines verdoyantes et le lac de barrage de Guatapé, en Colombie." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/SAXO%20Sophia_music.webp", "url": "https://casakayam.com/assets/Photos%20loren/SAXO%20Sophia_music.webp", "caption": "Saxophone dans la lumière du matin sur la terrasse en bambou", "description": "Une femme aux cheveux bouclés et lunettes rondes joue du saxophone alto dans la douce lumière du matin sous le toit en bambou de la terrasse de Casa Kayam, entourée de plantes vertes surplombant les collines de Guatapé — un moment musical quotidien dans l'auberge créative." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/A%20place%20with%20soul.webp", "url": "https://casakayam.com/assets/Photos%20loren/A%20place%20with%20soul.webp", "caption": "Voyageurs réunis dans le patio aux bougainvilliers", "description": "Un joyeux groupe de voyageurs internationaux pose ensemble dans le patio fleuri de Casa Kayam, sous les bougainvilliers roses et les murs blancs — l'esprit communautaire de l'auberge à Guatapé, en Colombie." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/JAM%20Session.webp", "url": "https://casakayam.com/assets/Photos%20loren/JAM%20Session.webp", "caption": "Jam session du soir sous la maloca en bambou", "description": "Jam session acoustique nocturne sous la maloca en bambou de Casa Kayam : des musiciens jouant des congas, deux guitares acoustiques et un chanteur au micro, lumière chaude, tapis au sol et une peinture colorée en arrière-plan — musique live au centre culturel de Guatapé." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/PAINTING%20Mino_art%20work.webp", "url": "https://casakayam.com/assets/Photos%20loren/PAINTING%20Mino_art%20work.webp", "caption": "Artiste en résidence peignant un portrait près de la fenêtre", "description": "Un artiste en résidence tatoué peint un portrait en noir et blanc sur toile, sur un chevalet en bois, près d'une grande fenêtre ouvrant sur les collines verdoyantes de Guatapé — l'atelier d'art et la résidence créative de Casa Kayam." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/RECORDS%20Studio_jerome%20work.webp", "url": "https://casakayam.com/assets/Photos%20loren/RECORDS%20Studio_jerome%20work.webp", "caption": "Ingénieur du son à la console de Kayam Records", "description": "L'ingénieur du son à la console de mixage éclairée de Kayam Records, le studio d'enregistrement professionnel de Casa Kayam : faders, clavier mécanique, moniteur de studio et panneaux acoustiques, avec des hôtes observant une session live à Guatapé, en Colombie." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/YOGA%20Session.webp", "url": "https://casakayam.com/assets/Photos%20loren/YOGA%20Session.webp", "caption": "Yoga au coucher du soleil sur la pelouse", "description": "Un groupe pratique le yoga en binôme et des étirements sur la pelouse au crépuscule à Casa Kayam, bras levés sous un palmier avec les collines de Guatapé et le ciel bleu en arrière-plan — yoga au lever et au coucher du soleil dans l'auberge bien-être." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/tailler.webp", "url": "https://casakayam.com/assets/Photos%20loren/tailler.webp", "caption": "Atelier d'art et d'artisanat autour de la table", "description": "Des hôtes de tous âges se réunissent autour d'une grande table pour un atelier pratique d'art et de reliure dans le laboratoire créatif de Casa Kayam, une animatrice les guidant, des Å“uvres originales aux murs et un chaleureux plafond en bois — ateliers du centre culturel de Guatapé." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/PAINTING%20Orrali_art%20work.jpg", "url": "https://casakayam.com/assets/Photos%20loren/PAINTING%20Orrali_art%20work.jpg", "caption": "Artiste en résidence peignant une fresque colorée en extérieur", "description": "Un artiste en résidence peint une grande fresque colorée sur un mur extérieur de Casa Kayam : un visage stylisé aux cheveux en forme de nuages sur fond jaune avec des formes bleues et rouges rappelant le drapeau colombien — culture du street-art et des artistes en résidence à Guatapé." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/music%20room%20ribon%20mics.webp", "url": "https://casakayam.com/assets/Photos%20loren/music%20room%20ribon%20mics.webp", "caption": "Enregistrement de sitar avec micros à ruban en studio", "description": "Un musicien assis en tailleur sur le sol en bois de Kayam Records joue du sitar, avec deux micros à ruban sur pied au premier plan et des panneaux diffuseurs en bois aux murs — enregistrement de musique du monde dans le studio professionnel de Casa Kayam à Guatapé." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/ROOM_dorms.webp", "url": "https://casakayam.com/assets/Photos%20loren/ROOM_dorms.webp", "caption": "Dortoir avec lits superposés en bois", "description": "Un dortoir chaleureux à Casa Kayam avec un lit superposé en bois massif (couchettes numérotées), des rideaux d'intimité individuels, du linge blanc frais, une échelle en bois et une penderie ouverte sous un plafond en planches de bois — chambres partagées à partir de 35 000 COP la nuit à Guatapé." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/ROOMS_private.webp", "url": "https://casakayam.com/assets/Photos%20loren/ROOMS_private.webp", "caption": "Chambre privée avec fresque botanique", "description": "Une chambre privée chaleureuse à Casa Kayam : lit double sur estrade basse avec linge blanc et chemin de table terracotta, serviettes pliées, plafond à lattes de bois, lampes de lecture douces et une fresque botanique décorative — chambres privées avec salle de bain et coworking à Guatapé." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/ROOMS_glamping.webp", "url": "https://casakayam.com/assets/Photos%20loren/ROOMS_glamping.webp", "caption": "Tente de glamping en bambou avec vue sur le lac", "description": "À l'intérieur d'une tente de glamping en bambou et toile à Casa Kayam, les pans ouverts encadrent une terrasse privée en bois et une vue panoramique sur le lac de barrage et les collines de Guatapé — glamping boutique pour deux à flanc de colline." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/VIEW%20from%20Kayam.webp", "url": "https://casakayam.com/assets/Photos%20loren/VIEW%20from%20Kayam.webp", "caption": "Vue aérienne sur les collines de la Vereda El Roble, Guatapé", "description": "Vue aérienne sur les collines verdoyantes et vallonnées de la Vereda El Roble à Guatapé, des fincas dispersées, le lac de barrage et le rocher d'El Peñol au loin sous un ciel bleu — l'environnement naturel de Casa Kayam, à 2 km du village." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/Photos%20loren/Terasse.webp", "url": "https://casakayam.com/assets/Photos%20loren/Terasse.webp", "caption": "Espace commun et réception bohème sous un toit en bambou", "description": "L'espace commun et la réception bohèmes de Casa Kayam sous un toit en bambou : longues tables et bancs communautaires en bois, fresques peintes à la main et piliers, plantes suspendues et une cuisine ouverte — le cÅ“ur social de l'auberge à Guatapé." },
+      { "@type": "ImageObject", "contentUrl": "https://casakayam.com/assets/couch%C3%A9%20de%20soleil.webp", "url": "https://casakayam.com/assets/couch%C3%A9%20de%20soleil.webp", "caption": "Cabanes de glamping en bambou au coucher du soleil", "description": "Les cabanes de glamping en bambou de Casa Kayam alignées le long d'une crête herbeuse, illuminées par la chaude lumière dorée du coucher de soleil sous un ciel doucement nuageux au-dessus de Guatapé, en Colombie." }
     ]
   }
   </script>
