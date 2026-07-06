@@ -10,6 +10,105 @@
   let lastScrollY = window.scrollY;
   let scrollTicking = false;
 
+  function initPromoPopup() {
+    const promoCode = "STAYDIFFERENT";
+    const promoUrl = "https://kayam-partner-portal.fly.dev/reservar?promo=STAYDIFFERENT";
+    const dismissedKey = "casaKayamPromoSTAYDIFFERENTDismissed";
+    const lang = (document.documentElement.getAttribute("lang") || "en").slice(0, 2);
+    const copyByLang = {
+      en: {
+        eyebrow: "Special offer",
+        title: "10% off lodging",
+        text: "Use code STAYDIFFERENT and book your stay at Casa Kayam.",
+        codeLabel: "Promo code",
+        note: "The code will be filled automatically.",
+        cta: "Claim the offer",
+        close: "Close offer"
+      },
+      es: {
+        eyebrow: "Oferta especial",
+        title: "10% en alojamiento",
+        text: "Usa el codigo STAYDIFFERENT y reserva tu estadia en Casa Kayam.",
+        codeLabel: "Codigo promo",
+        note: "El codigo se rellenara automaticamente.",
+        cta: "Aprovechar oferta",
+        close: "Cerrar oferta"
+      },
+      fr: {
+        eyebrow: "Offre speciale",
+        title: "10% sur le logement",
+        text: "Utilise le code STAYDIFFERENT et reserve ton sejour a Casa Kayam.",
+        codeLabel: "Code promo",
+        note: "Le code sera rempli automatiquement.",
+        cta: "J'en profite",
+        close: "Fermer l'offre"
+      }
+    };
+    const copy = copyByLang[lang] || copyByLang.en;
+
+    try {
+      if (sessionStorage.getItem(dismissedKey) === "1") return;
+    } catch (error) {
+      // Storage can be unavailable in some privacy modes; the popup still works.
+    }
+
+    const popup = document.createElement("div");
+    popup.className = "promo-popup";
+    popup.setAttribute("aria-hidden", "true");
+    popup.innerHTML = `
+      <div class="promo-popup__backdrop" data-promo-popup-close></div>
+      <section class="promo-popup__dialog" role="dialog" aria-modal="true" aria-labelledby="promo-popup-title" aria-describedby="promo-popup-desc" tabindex="-1">
+        <button class="promo-popup__close" type="button" aria-label="${copy.close}" data-promo-popup-close>+</button>
+        <p class="promo-popup__eyebrow">${copy.eyebrow}</p>
+        <h2 class="promo-popup__title" id="promo-popup-title">${copy.title}</h2>
+        <p class="promo-popup__text" id="promo-popup-desc">${copy.text}</p>
+        <div class="promo-popup__code" aria-label="${copy.codeLabel} ${promoCode}">
+          <span>${copy.codeLabel}</span>
+          <strong>${promoCode}</strong>
+        </div>
+        <a class="promo-popup__cta" href="${promoUrl}" target="_blank" rel="noreferrer" data-promo-popup-cta>${copy.cta}</a>
+        <p class="promo-popup__note">${copy.note}</p>
+      </section>
+    `;
+
+    function markDismissed() {
+      try {
+        sessionStorage.setItem(dismissedKey, "1");
+      } catch (error) {
+        // No-op when storage is blocked.
+      }
+    }
+
+    function closePopup() {
+      if (!popup.classList.contains("is-visible")) return;
+      markDismissed();
+      popup.classList.remove("is-visible");
+      popup.setAttribute("aria-hidden", "true");
+      document.removeEventListener("keydown", onPromoKeydown);
+      window.setTimeout(() => popup.remove(), 220);
+    }
+
+    function onPromoKeydown(event) {
+      if (event.key === "Escape") closePopup();
+    }
+
+    popup.querySelectorAll("[data-promo-popup-close]").forEach((closer) => {
+      closer.addEventListener("click", closePopup);
+    });
+
+    const cta = popup.querySelector("[data-promo-popup-cta]");
+    if (cta) cta.addEventListener("click", markDismissed);
+
+    body.appendChild(popup);
+
+    window.setTimeout(() => {
+      popup.classList.add("is-visible");
+      popup.setAttribute("aria-hidden", "false");
+      document.addEventListener("keydown", onPromoKeydown);
+      const dialog = popup.querySelector(".promo-popup__dialog");
+      if (dialog) dialog.focus({ preventScroll: true });
+    }, 900);
+  }
   function syncHeaderState() {
     if (!header) return;
     const currentScrollY = window.scrollY;
@@ -167,6 +266,7 @@
     if (!header.contains(event.target)) setMobileNav(false);
   });
 
+  initPromoPopup();
   syncScrollEffects();
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", onScroll, { passive: true });

@@ -3520,6 +3520,193 @@ body {
   }
 }
 
+/* --- STAYDIFFERENT promo popup --- */
+.promo-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 220;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+.promo-popup.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.promo-popup__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 12, 14, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.promo-popup__dialog {
+  position: relative;
+  width: min(460px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  padding: 30px;
+  border: 1px solid rgba(228, 226, 221, 0.18);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at top right, rgba(230, 116, 10, 0.24), transparent 36%),
+    linear-gradient(180deg, rgba(228, 226, 221, 0.07), rgba(228, 226, 221, 0.015)),
+    #0b1212;
+  color: #e4e2dd;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.42);
+  outline: none;
+  transform: translateY(16px) scale(0.98);
+  transition: transform 220ms ease;
+}
+
+.promo-popup.is-visible .promo-popup__dialog {
+  transform: translateY(0) scale(1);
+}
+
+.promo-popup__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(228, 226, 221, 0.1);
+  color: #e4e2dd;
+  font-family: var(--font-display, 'Anton', sans-serif);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+
+.promo-popup__eyebrow {
+  margin: 0 44px 12px 0;
+  font-family: var(--font-mono, 'DM Mono', monospace);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #e63f0a;
+}
+
+.promo-popup__title {
+  margin: 0;
+  font-family: var(--font-display, 'Anton', sans-serif);
+  font-size: clamp(38px, 8vw, 58px);
+  line-height: 0.95;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #e4e2dd;
+}
+
+.promo-popup__text {
+  margin: 16px 0 0;
+  max-width: 34ch;
+  font-family: var(--font-body, 'Akshar', sans-serif);
+  font-size: 18px;
+  line-height: 1.45;
+  color: rgba(228, 226, 221, 0.84);
+}
+
+.promo-popup__code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 22px;
+  padding: 13px 14px;
+  border: 1px dashed rgba(230, 63, 10, 0.72);
+  border-radius: 8px;
+  background: rgba(230, 63, 10, 0.11);
+}
+
+.promo-popup__code span {
+  font-family: var(--font-mono, 'DM Mono', monospace);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(228, 226, 221, 0.68);
+}
+
+.promo-popup__code strong {
+  font-family: var(--font-mono, 'DM Mono', monospace);
+  font-size: 16px;
+  color: #fff;
+  user-select: all;
+}
+
+.promo-popup__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 22px;
+  padding: 15px 20px;
+  border-radius: 4px;
+  background: #e63f0a;
+  color: #fff;
+  font-family: var(--font-display, 'Anton', sans-serif);
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 10px 28px rgba(230, 63, 10, 0.28);
+  transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.promo-popup__cta:hover {
+  background: #e6740a;
+  box-shadow: 0 14px 34px rgba(230, 63, 10, 0.34);
+  transform: translateY(-1px);
+}
+
+.promo-popup__note {
+  margin: 12px 0 0;
+  font-family: var(--font-mono, 'DM Mono', monospace);
+  font-size: 12px;
+  color: rgba(228, 226, 221, 0.58);
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .promo-popup {
+    align-items: end;
+    padding: 14px;
+  }
+
+  .promo-popup__dialog {
+    max-height: calc(100vh - 28px);
+    padding: 26px 20px 22px;
+  }
+
+  .promo-popup__title {
+    font-size: clamp(34px, 12vw, 46px);
+  }
+
+  .promo-popup__text {
+    font-size: 17px;
+  }
+
+  .promo-popup__code {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .promo-popup,
+  .promo-popup__dialog,
+  .promo-popup__cta {
+    transition: none;
+  }
+}
 .modal {
   position: fixed;
   inset: 0;
